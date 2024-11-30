@@ -1,0 +1,4 @@
+Delete File after the first commit
+(GitHub doesn't commit empty folders)
+
+Dummy Commit for GUI Git Collab Wiki Tutorial

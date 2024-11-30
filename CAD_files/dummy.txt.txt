@@ -1,2 +1,0 @@
-Delete File after the first commit
-(GitHub doesn't commit empty folders)
