@@ -1,11 +1,11 @@
-![](/images/robot.png)
+![Robot](https://github.com/1412kauti/space_gripper/blob/main/Visualization/images/robot.png)
 # URDF File
 
 `graph.txt` contains how the links and joints are deined, visit [here](http://www.webgraphviz.com/) and paste the following text to generate the graph
 
 (Purely for visualization)
 
-```mermaid
+```
 digraph G {  "base_link" -> "side_1_1" [ label = "side_1_joint" ] 
   "side_1_1" -> "finger1_0_1" [ label = "finger_1_1_joint" ] 
   "finger1_0_1" -> "finger1_1_1" [ label = "finger_1_2_joint" ] 
@@ -20,7 +20,7 @@ digraph G {  "base_link" -> "side_1_1" [ label = "side_1_joint" ]
   "finger3_1_1" -> "finger3_2_1" [ label = "finger_3_3_joint" ] 
 }
 ```
-![](/images/graph.png)
+![Links and Joints](https://github.com/1412kauti/space_gripper/blob/main/Visualization/images/graph.png)
 # Using the URDF Files
 
 Copy the `hand_assembly.urdf` and `meshes` folder to your project to import the urdf as usual using either MujuCo
