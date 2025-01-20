@@ -1,0 +1,510 @@
+<?xml version="1.0" ?>
+<robot name="hand_assembly">
+
+<!-- <material name="silver">
+  <color rgba="0.700 0.700 0.700 1.000"/>
+</material> -->
+
+<link name="base_link">
+  <inertial>
+    <origin xyz="-1.4296293806596375e-05 2.476182899508402e-05 -0.018113017390094938" rpy="0 0 0"/>
+    <mass value="1.258877803352642"/>
+    <inertia ixx="0.0014181655556115204" iyy="0.0014167262864896689" izz="0.0024705430558723067" ixy="1.2464361051740964e-06" iyz="4.95230302728175e-07" ixz="-2.859256145862734e-07"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <!-- <material name="silver"/>
+    <material/> -->
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="side_11">
+  <inertial>
+    <origin xyz="0.022932442574379833 0.00029379552413575386 -0.016108384940578965" rpy="0 0 0"/>
+    <mass value="0.031721528262617364"/>
+    <inertia ixx="1.4428595135041886e-05" iyy="1.7697540102706323e-05" izz="1.1724682315484994e-05" ixy="-3.6048209406044674e-07" iyz="-7.55081162250383e-08" ixz="1.0942827601481952e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.05 -0.0 -0.007" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="meshes/side_11.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <!-- <material name="silver"/>
+    <material/> -->
+  </visual>
+  <collision>
+    <origin xyz="-0.05 -0.0 -0.007" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="meshes/side_11.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="finger1_01">
+  <inertial>
+    <origin xyz="0.013312453651947068 -0.02090363768976653 0.00336735855839608" rpy="0 0 0"/>
+    <mass value="0.1927519223029253"/>
+    <inertia ixx="3.085375724528148e-05" iyy="5.065844333267816e-05" izz="5.168357107456379e-05" ixy="-9.822978300079416e-07" iyz="-1.8040740779810724e-07" ixz="-8.771790526031647e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.102515 -0.019915 0.001052" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="meshes/finger1_01.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <!-- <material name="silver"/>
+    <material/> -->
+  </visual>
+  <collision>
+    <origin xyz="-0.102515 -0.019915 0.001052" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="meshes/finger1_01.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="finger1_11">
+  <inertial>
+    <origin xyz="0.014919664792453796 -0.020888529805285643 0.004090195407434487" rpy="0 0 0"/>
+    <mass value="0.21647119728439546"/>
+    <inertia ixx="3.429241098501298e-05" iyy="5.8062964549411913e-05" izz="6.007065608180321e-05" ixy="-9.989152261446468e-07" iyz="-2.1536027424412996e-07" ixz="-1.0474908700657765e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.161015 -0.019915 0.001052" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="meshes/finger1_11.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <!-- <material name="silver"/>
+    <material/> -->
+  </visual>
+  <collision>
+    <origin xyz="-0.161015 -0.019915 0.001052" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="meshes/finger1_11.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="finger1_21">
+  <inertial>
+    <origin xyz="0.024007170264284283 -0.020865585534825547 0.002092261980941372" rpy="0 0 0"/>
+    <mass value="0.29469167868527735"/>
+    <inertia ixx="4.326420791623045e-05" iyy="0.00012227053970832041" izz="0.00012397646310049332" ixy="-1.0052845576672325e-06" iyz="-1.6394784882967919e-07" ixz="-1.437880343987995e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.219515 -0.019915 0.001052" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="meshes/finger1_21.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <!-- <material name="silver"/>
+    <material/> -->
+  </visual>
+  <collision>
+    <origin xyz="-0.219515 -0.019915 0.001052" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="meshes/finger1_21.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="side_21">
+  <inertial>
+    <origin xyz="-0.011720655742159664 0.019713450806916187 -0.016108385280567" rpy="0 0 0"/>
+    <mass value="0.031721528738080075"/>
+    <inertia ixx="1.656811733135601e-05" iyy="1.555801810384413e-05" izz="1.1724682474320585e-05" ixy="1.595735749478758e-06" iyz="9.854306557324479e-07" ixz="-4.81749420341921e-07"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.025 -0.043301 -0.007" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="meshes/side_21.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <!-- <material name="silver"/>
+    <material/> -->
+  </visual>
+  <collision>
+    <origin xyz="0.025 -0.043301 -0.007" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="meshes/side_21.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="finger2_01">
+  <inertial>
+    <origin xyz="0.011446458475810745 0.021980836468138004 0.0033673579962633397" rpy="0 0 0"/>
+    <mass value="0.192751923056906"/>
+    <inertia ixx="4.485657702361142e-05" iyy="3.665562391958843e-05" izz="5.1683571076910004e-05" ixy="9.066829489534634e-06" iyz="-7.506389623486197e-06" ixz="4.542132455830709e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.068504 -0.078823 0.001052" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="meshes/finger2_01.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <!-- <material name="silver"/>
+    <material/> -->
+  </visual>
+  <collision>
+    <origin xyz="0.068504 -0.078823 0.001052" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="meshes/finger2_01.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="finger2_11">
+  <inertial>
+    <origin xyz="0.011446457998220569 0.021980323520509243 0.003367358368217071" rpy="0 0 0"/>
+    <mass value="0.1927519225817779"/>
+    <inertia ixx="4.4856576866605935e-05" iyy="3.665562349883418e-05" izz="5.168357096961389e-05" ixy="9.066829466056886e-06" iyz="-7.506389657738549e-06" ixz="4.542132753285915e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.097754 -0.129486 0.001052" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="meshes/finger2_11.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <!-- <material name="silver"/>
+    <material/> -->
+  </visual>
+  <collision>
+    <origin xyz="0.097754 -0.129486 0.001052" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="meshes/finger2_11.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="finger2_21">
+  <inertial>
+    <origin xyz="0.011030456030108327 0.02281875180892784 0.003260510236213916" rpy="0 0 0"/>
+    <mass value="0.1990629672693476"/>
+    <inertia ixx="4.9392569099721007e-05" iyy="3.7349792175389845e-05" izz="5.593654120491717e-05" ixy="1.122735507960368e-05" iyz="-6.962163115425496e-06" ixz="4.2713971655467344e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.127004 -0.180148 0.001052" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="meshes/finger2_21.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <!-- <material name="silver"/>
+    <material/> -->
+  </visual>
+  <collision>
+    <origin xyz="0.127004 -0.180148 0.001052" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="meshes/finger2_21.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="side_31">
+  <inertial>
+    <origin xyz="-0.011211787181996384 -0.020007245939481007 -0.0161083854417595" rpy="0 0 0"/>
+    <mass value="0.031721528285783375"/>
+    <inertia ixx="1.7192490484971155e-05" iyy="1.4933644723435678e-05" izz="1.1724682297812851e-05" ixy="-1.235253628514889e-06" iyz="-9.099226229421713e-07" ixz="-6.125333267225594e-07"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.025 0.043301 -0.007" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="meshes/side_31.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <!-- <material name="silver"/>
+    <material/> -->
+  </visual>
+  <collision>
+    <origin xyz="0.025 0.043301 -0.007" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="meshes/side_31.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="finger3_01">
+  <inertial>
+    <origin xyz="-0.02475891241824414 -0.0010771986715013976 0.0033673579962628444" rpy="0 0 0"/>
+    <mass value="0.19275192305690583"/>
+    <inertia ixx="4.6557966865337815e-05" iyy="3.495423407786442e-05" izz="5.168357107691217e-05" ixy="-8.08453160641774e-06" iyz="7.686796905846332e-06" ixz="4.22965787672772e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.034011 0.098738 0.001052" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="meshes/finger3_01.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <!-- <material name="silver"/>
+    <material/> -->
+  </visual>
+  <collision>
+    <origin xyz="0.034011 0.098738 0.001052" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="meshes/finger3_01.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="finger3_11">
+  <inertial>
+    <origin xyz="-0.02475891298570304 -0.0010766856719868212 0.0033673583682165497" rpy="0 0 0"/>
+    <mass value="0.1927519225817774"/>
+    <inertia ixx="4.655796649024983e-05" iyy="3.495423387524124e-05" izz="5.1683570969587866e-05" ixy="-8.084531708891975e-06" iyz="7.686797180586307e-06" ixz="4.229657757670673e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.063261 0.149401 0.001052" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="meshes/finger3_11.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <!-- <material name="silver"/>
+    <material/> -->
+  </visual>
+  <collision>
+    <origin xyz="0.063261 0.149401 0.001052" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="meshes/finger3_11.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="finger3_21">
+  <inertial>
+    <origin xyz="-0.025276591205196916 -0.0018564111493006852 0.0032605102362137255" rpy="0 0 0"/>
+    <mass value="0.19906296726934794"/>
+    <inertia ixx="5.008366112273059e-05" iyy="3.665870015233082e-05" izz="5.593654120481656e-05" ixy="-1.0828352914040926e-05" iyz="7.1802200127299675e-06" ixz="3.893711540480776e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.092511 0.200063 0.001052" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="meshes/finger3_21.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <!-- <material name="silver"/>
+    <material/> -->
+  </visual>
+  <collision>
+    <origin xyz="0.092511 0.200063 0.001052" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="meshes/finger3_21.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="side_1_joint" type="revolute">
+  <origin xyz="0.05 0.0 0.007" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="side_11"/>
+  <axis xyz="-0.0 0.0 1.0"/>
+  <limit upper="0.785398" lower="-0.785398" effort="100" velocity="100"/>
+</joint>
+<transmission name="side_1_joint_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="side_1_joint">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="side_1_joint_actr">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<joint name="finger_1_1_joint" type="revolute">
+  <origin xyz="0.052515 0.019915 -0.008052" rpy="0 0 0"/>
+  <parent link="side_11"/>
+  <child link="finger1_01"/>
+  <axis xyz="0.0 -1.0 -0.0"/>
+  <limit upper="1.570796" lower="0.0" effort="100" velocity="100"/>
+</joint>
+<transmission name="finger_1_1_joint_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="finger_1_1_joint">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="finger_1_1_joint_actr">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<joint name="finger_1_2_joint" type="revolute">
+  <origin xyz="0.0585 0.0 0.0" rpy="0 0 0"/>
+  <parent link="finger1_01"/>
+  <child link="finger1_11"/>
+  <axis xyz="0.0 -1.0 -0.0"/>
+  <limit upper="1.570796" lower="0.0" effort="100" velocity="100"/>
+</joint>
+<transmission name="finger_1_2_joint_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="finger_1_2_joint">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="finger_1_2_joint_actr">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<joint name="finger_1_3_joint" type="revolute">
+  <origin xyz="0.0585 0.0 0.0" rpy="0 0 0"/>
+  <parent link="finger1_11"/>
+  <child link="finger1_21"/>
+  <axis xyz="-0.0 -1.0 -0.0"/>
+  <limit upper="1.570796" lower="0.0" effort="100" velocity="100"/>
+</joint>
+<transmission name="finger_1_3_joint_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="finger_1_3_joint">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="finger_1_3_joint_actr">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<joint name="side_2_joint" type="revolute">
+  <origin xyz="-0.025 0.043301 0.007" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="side_21"/>
+  <axis xyz="0.0 -0.0 1.0"/>
+  <limit upper="0.785398" lower="-0.785398" effort="100" velocity="100"/>
+</joint>
+<transmission name="side_2_joint_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="side_2_joint">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="side_2_joint_actr">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<joint name="finger_2_1_joint" type="revolute">
+  <origin xyz="-0.043504 0.035522 -0.008052" rpy="0 0 0"/>
+  <parent link="side_21"/>
+  <child link="finger2_01"/>
+  <axis xyz="0.866025 0.5 -0.0"/>
+  <limit upper="1.570796" lower="0.0" effort="100" velocity="100"/>
+</joint>
+<transmission name="finger_2_1_joint_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="finger_2_1_joint">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="finger_2_1_joint_actr">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<joint name="finger_2_2_joint" type="revolute">
+  <origin xyz="-0.02925 0.050663 0.0" rpy="0 0 0"/>
+  <parent link="finger2_01"/>
+  <child link="finger2_11"/>
+  <axis xyz="0.866025 0.5 -0.0"/>
+  <limit upper="1.570796" lower="0.0" effort="100" velocity="100"/>
+</joint>
+<transmission name="finger_2_2_joint_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="finger_2_2_joint">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="finger_2_2_joint_actr">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<joint name="finger_2_3_joint" type="revolute">
+  <origin xyz="-0.02925 0.050662 0.0" rpy="0 0 0"/>
+  <parent link="finger2_11"/>
+  <child link="finger2_21"/>
+  <axis xyz="0.866025 0.5 0.0"/>
+  <limit upper="1.570796" lower="0.0" effort="100" velocity="100"/>
+</joint>
+<transmission name="finger_2_3_joint_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="finger_2_3_joint">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="finger_2_3_joint_actr">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<joint name="side_3_joint" type="revolute">
+  <origin xyz="-0.025 -0.043301 0.007" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="side_31"/>
+  <axis xyz="0.0 0.0 1.0"/>
+  <limit upper="0.785398" lower="-0.785398" effort="100" velocity="100"/>
+</joint>
+<transmission name="side_3_joint_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="side_3_joint">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="side_3_joint_actr">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<joint name="finger_3_1_joint" type="revolute">
+  <origin xyz="-0.009011 -0.055437 -0.008052" rpy="0 0 0"/>
+  <parent link="side_31"/>
+  <child link="finger3_01"/>
+  <axis xyz="-0.866025 0.5 -0.0"/>
+  <limit upper="1.570796" lower="0.0" effort="100" velocity="100"/>
+</joint>
+<transmission name="finger_3_1_joint_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="finger_3_1_joint">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="finger_3_1_joint_actr">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<joint name="finger_3_2_joint" type="revolute">
+  <origin xyz="-0.02925 -0.050663 0.0" rpy="0 0 0"/>
+  <parent link="finger3_01"/>
+  <child link="finger3_11"/>
+  <axis xyz="-0.866025 0.5 -0.0"/>
+  <limit upper="1.570796" lower="0.0" effort="100" velocity="100"/>
+</joint>
+<transmission name="finger_3_2_joint_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="finger_3_2_joint">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="finger_3_2_joint_actr">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<joint name="finger_3_3_joint" type="revolute">
+  <origin xyz="-0.02925 -0.050662 0.0" rpy="0 0 0"/>
+  <parent link="finger3_11"/>
+  <child link="finger3_21"/>
+  <axis xyz="-0.866025 0.5 -0.0"/>
+  <limit upper="1.570796" lower="0.0" effort="100" velocity="100"/>
+</joint>
+<transmission name="finger_3_3_joint_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="finger_3_3_joint">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="finger_3_3_joint_actr">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+</robot>

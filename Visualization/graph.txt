@@ -1,0 +1,13 @@
+digraph G {  "base_link" -> "side_1_1" [ label = "side_1_joint" ] 
+  "side_1_1" -> "finger1_0_1" [ label = "finger_1_1_joint" ] 
+  "finger1_0_1" -> "finger1_1_1" [ label = "finger_1_2_joint" ] 
+  "finger1_1_1" -> "finger1_2_1" [ label = "finger_1_3_joint" ] 
+  "base_link" -> "side_2_1" [ label = "side_2_joint" ] 
+  "side_2_1" -> "finger2_0_1" [ label = "finger_2_1_joint" ] 
+  "finger2_0_1" -> "finger2_1_1" [ label = "finger_2_2_joint" ] 
+  "finger2_1_1" -> "finger2_2_1" [ label = "finger_2_3_joint" ] 
+  "base_link" -> "side_3_1" [ label = "side_3_joint" ] 
+  "side_3_1" -> "finger3_0_1" [ label = "finger_3_1_joint" ] 
+  "finger3_0_1" -> "finger3_1_1" [ label = "finger_3_2_joint" ] 
+  "finger3_1_1" -> "finger3_2_1" [ label = "finger_3_3_joint" ] 
+}
