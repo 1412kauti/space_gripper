@@ -1,0 +1,75 @@
+# -*- coding: utf-8 -*-
+"""
+Code to make calculations of the forward kinematics of 1 finger
+
+"""
+
+import numpy as np
+import sympy as sp
+from numpy import pi
+from numpy import cos, sin
+
+def transformationMatrix(use_symbolic=True, theta_n=None, d_n=None, a_n=None, alpha_n=None):
+
+    
+    #define symbolic DH parameters
+    if use_symbolic==True:
+        theta = sp.symbols('theta_1 theta_2 theta_3 theta_4')
+        d = sp.symbols('d_1 L_2 L_3 L_3')
+        a = sp.symbols('a_1 a_2 a_3 a_4')
+        alpha = sp.symbols('alpha_1 alpha_2 alpha_3 alpha_4')
+    else:
+        theta = theta_n
+        d = d_n
+        a = a_n
+        alpha = alpha_n
+
+    T = {}
+
+    #define the transformation matrix
+    for i in range(4):
+        if use_symbolic:
+            T[i+1]=sp.Matrix([
+                [sp.cos(theta[i]), -sp.cos(alpha[i])*sp.sin(theta[i]), sp.sin(alpha[i])*sp.sin(theta[i]), a[i]*sp.cos(theta[i])],
+                [sp.sin(theta[i]), sp.cos(alpha[i])*sp.cos(theta[i]), -sp.sin(alpha[i])*sp.cos(theta[i]), a[i]*sp.sin(theta[i])],
+                [0, sp.sin(alpha[i]), sp.cos(alpha[i]), d[i]],
+                [0,0,0,1]
+            ])  
+        else:
+            T[i+1] = np.array([
+                [cos(theta[i]), -cos(alpha[i])*sin(theta[i]), sin(alpha[i])*sin(theta[i]), a[i]*cos(theta[i])],
+                [sin(theta[i]), cos(alpha[i])*cos(theta[i]), -sin(alpha[i])*cos(theta[i]), a[i]*sin(theta[i])],
+                [0, sin(alpha[i]), cos(alpha[i]), d[i]],
+                [0,0,0,1]
+            ], dtype=np.float64)
+        
+    T_total = sp.eye(4) if use_symbolic else np.eye(4)
+    for i in range(1,5):
+        T_total = T_total@T[i]
+        
+    return T, T_total
+
+#to find sympy algebraic transformation matrices and total matrix
+T_sym, T_total_sym = transformationMatrix(use_symbolic=True)
+print("Transformation Matrices 1-4 without numerical values")
+for i in range(1,5):
+    print(f"T[{i}] = ")
+    sp.pprint(T_sym[i])
+    print("\n")
+print("Total Transformation Matrix (algebraic):")
+T_total_sym = sp.simplify(T_total_sym)
+sp.pprint(T_total_sym)
+print("\n")
+
+#to find numpy numerical transformation matrices and total transformation matrix (using actual values)
+theta_n = [0,0,0,0,0]
+d_n = [0,0.042882,0.057755,0.057755,0.055798]
+a_n = [0,0.053311,0,0,0]
+alpha_n = [0,pi/2,0,0,0]
+
+T_num, T_total_num = transformationMatrix(use_symbolic=False, theta_n=theta_n, d_n=d_n, a_n=a_n, alpha_n=alpha_n)
+
+print("Transformation matrices 1-4 with numerical values:")
+for i in range(1,5):
+    print(f"T[{i}] = \n", T_num[i], "\n")
+print("Total Transformation Matrix (numerical): ", T_total_num)
