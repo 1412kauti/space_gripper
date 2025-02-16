@@ -1,0 +1,53 @@
+# -*- coding: utf-8 -*-
+"""
+Computing the Jacobian using the known values of x_1, x_2, x_3, and phi
+"""
+import sympy as sp
+
+theta_1, theta_2, theta_3, theta_4 = sp.symbols('theta_1, theta_2, theta_3, theta_4')
+d_1, L_2, L_3, L_4 = sp.symbols('d_1 L_2 L_3 L_4')
+a_1 = sp.Symbol('a_1')
+
+x_1 = sp.cos(theta_1)*(L_4*sp.cos(theta_2+theta_3+theta_4)+L_3*sp.cos(theta_2+theta_3)+L_2*sp.cos(theta_2)+a_1)
+x_2 = sp.sin(theta_1)*(L_4*sp.cos(theta_2+theta_3+theta_4)+L_3*sp.cos(theta_2+theta_3)+L_2*sp.cos(theta_2)+a_1)
+x_3 = L_4*sp.sin(theta_2+theta_3+theta_4) + L_3*sp.sin(theta_2+theta_3) + L_2*sp.sin(theta_2)+d_1
+phi = theta_1+theta_2+theta_3+theta_4
+
+X = sp.Matrix([[x_1],
+     [x_2],
+     [x_3],
+     [phi],
+     ])
+print('X is given by: ')
+sp.pprint(X)
+
+dx_1dtheta_1 = sp.diff(x_1, theta_1)
+dx_1dtheta_2 = sp.diff(x_1, theta_2)
+dx_1dtheta_3 = sp.diff(x_1, theta_3)
+dx_1dtheta_4 = sp.diff(x_1, theta_4)
+
+dx_2dtheta_1 = sp.diff(x_2, theta_1)
+dx_2dtheta_2 = sp.diff(x_2, theta_2)
+dx_2dtheta_3 = sp.diff(x_2, theta_3)
+dx_2dtheta_4 = sp.diff(x_2, theta_4)
+
+dx_3dtheta_1 = sp.diff(x_3, theta_1)
+dx_3dtheta_2 = sp.diff(x_3, theta_2)
+dx_3dtheta_3 = sp.diff(x_3, theta_3)
+dx_3dtheta_4 = sp.diff(x_3, theta_4)
+
+dphidtheta_1 = sp.diff(phi, theta_1)
+dphidtheta_2 = sp.diff(phi, theta_2)
+dphidtheta_3 = sp.diff(phi, theta_3)
+dphidtheta_4 = sp.diff(phi, theta_4)
+
+
+jacobianMatrix = sp.Matrix([
+                        [dx_1dtheta_1, dx_1dtheta_2, dx_1dtheta_3, dx_1dtheta_4],
+                        [dx_2dtheta_1, dx_2dtheta_2, dx_2dtheta_3, dx_2dtheta_4],
+                        [dx_3dtheta_1, dx_3dtheta_2, dx_3dtheta_3, dx_3dtheta_4],
+                        [dphidtheta_1, dphidtheta_2, dphidtheta_3, dphidtheta_4]
+    ])
+jacobianMatrix = sp.simplify(jacobianMatrix)
+print('Full Jacobian Matrix: ')
+sp.pprint(jacobianMatrix)
