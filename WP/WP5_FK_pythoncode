@@ -15,8 +15,8 @@ def transformationMatrix(use_symbolic=True, theta_n=None, d_n=None, a_n=None, al
     #define symbolic DH parameters
     if use_symbolic==True:
         theta = sp.symbols('theta_1 theta_2 theta_3 theta_4')
-        d = sp.symbols('d_1 L_2 L_3 L_3')
-        a = sp.symbols('a_1 a_2 a_3 a_4')
+        d = sp.symbols('a_1 L_2 L_3 L_3')
+        a = sp.symbols('d_1 d_2 d_3 d_4')
         alpha = sp.symbols('alpha_1 alpha_2 alpha_3 alpha_4')
     else:
         theta = theta_n
@@ -63,8 +63,8 @@ print("\n")
 
 #to find numpy numerical transformation matrices and total transformation matrix (using actual values)
 theta_n = [0,0,0,0,0]
-d_n = [0,0.042882,0.057755,0.057755,0.055798]
-a_n = [0,0.053311,0,0,0]
+a_n = [0,0.053311,0.057755,0.057755,0.055798]
+d_n = [0,0.042882,0,0,0]
 alpha_n = [0,pi/2,0,0,0]
 
 T_num, T_total_num = transformationMatrix(use_symbolic=False, theta_n=theta_n, d_n=d_n, a_n=a_n, alpha_n=alpha_n)
