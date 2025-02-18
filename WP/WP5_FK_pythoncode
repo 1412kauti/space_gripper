@@ -1,8 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Code to make calculations of the forward kinematics of 1 finger
-
-"""
 
 import numpy as np
 import sympy as sp
@@ -15,8 +10,8 @@ def transformationMatrix(use_symbolic=True, theta_n=None, d_n=None, a_n=None, al
     #define symbolic DH parameters
     if use_symbolic==True:
         theta = sp.symbols('theta_1 theta_2 theta_3 theta_4')
-        d = sp.symbols('a_1 L_2 L_3 L_3')
-        a = sp.symbols('d_1 d_2 d_3 d_4')
+        a = sp.symbols('a_1 L_2 L_3 L_4')
+        d = sp.symbols('d_1 d_2 d_3 d_4')
         alpha = sp.symbols('alpha_1 alpha_2 alpha_3 alpha_4')
     else:
         theta = theta_n
@@ -73,3 +68,4 @@ print("Transformation matrices 1-4 with numerical values:")
 for i in range(1,5):
     print(f"T[{i}] = \n", T_num[i], "\n")
 print("Total Transformation Matrix (numerical): ", T_total_num)
+
