@@ -1,0 +1,170 @@
+# -*- coding: utf-8 -*-
+"""
+Computing the Jacobian using the known values of x_1, x_2, x_3, and phi
+and then using this to find the inertia matrix M(q)
+"""
+import sympy as sp
+
+theta_1, theta_2, theta_3, theta_4 = sp.symbols('theta_1, theta_2, theta_3, theta_4')
+d_1, L_2, L_3, L_4 = sp.symbols('d_1 L_2 L_3 L_4')
+a_1 = sp.Symbol('a_1')
+
+x_1 = sp.cos(theta_1)*(L_4*sp.cos(theta_2+theta_3+theta_4)+L_3*sp.cos(theta_2+theta_3)+L_2*sp.cos(theta_2)+a_1)
+x_2 = sp.sin(theta_1)*(L_4*sp.cos(theta_2+theta_3+theta_4)+L_3*sp.cos(theta_2+theta_3)+L_2*sp.cos(theta_2)+a_1)
+x_3 = L_4*sp.sin(theta_2+theta_3+theta_4) + L_3*sp.sin(theta_2+theta_3) + L_2*sp.sin(theta_2)+d_1
+phi = theta_1+theta_2+theta_3+theta_4
+
+X = sp.Matrix([[x_1],
+     [x_2],
+     [x_3],
+     [phi],
+     ])
+print('X is given by: ')
+sp.pprint(X)
+
+dx_1dtheta_1 = sp.diff(x_1, theta_1)
+dx_1dtheta_2 = sp.diff(x_1, theta_2)
+dx_1dtheta_3 = sp.diff(x_1, theta_3)
+dx_1dtheta_4 = sp.diff(x_1, theta_4)
+
+dx_2dtheta_1 = sp.diff(x_2, theta_1)
+dx_2dtheta_2 = sp.diff(x_2, theta_2)
+dx_2dtheta_3 = sp.diff(x_2, theta_3)
+dx_2dtheta_4 = sp.diff(x_2, theta_4)
+
+dx_3dtheta_1 = sp.diff(x_3, theta_1)
+dx_3dtheta_2 = sp.diff(x_3, theta_2)
+dx_3dtheta_3 = sp.diff(x_3, theta_3)
+dx_3dtheta_4 = sp.diff(x_3, theta_4)
+
+dphidtheta_1 = sp.diff(phi, theta_1)
+dphidtheta_2 = sp.diff(phi, theta_2)
+dphidtheta_3 = sp.diff(phi, theta_3)
+dphidtheta_4 = sp.diff(phi, theta_4)
+
+
+jacobianMatrix = sp.Matrix([
+                        [dx_1dtheta_1, dx_1dtheta_2, dx_1dtheta_3, dx_1dtheta_4],
+                        [dx_2dtheta_1, dx_2dtheta_2, dx_2dtheta_3, dx_2dtheta_4],
+                        [dx_3dtheta_1, dx_3dtheta_2, dx_3dtheta_3, dx_3dtheta_4],
+                        [dphidtheta_1, dphidtheta_2, dphidtheta_3, dphidtheta_4]
+    ])
+jacobianMatrix = sp.simplify(jacobianMatrix)
+print('Full Jacobian Matrix: ')
+sp.pprint(jacobianMatrix)
+
+Jv = sp.Matrix([
+    [dx_1dtheta_1, dx_1dtheta_2, dx_1dtheta_3, dx_1dtheta_4],
+    [dx_2dtheta_1, dx_2dtheta_2, dx_2dtheta_3, dx_2dtheta_4],
+    [dx_3dtheta_1, dx_3dtheta_2, dx_3dtheta_3, dx_3dtheta_4]
+    ])
+Jw = sp.Matrix([[1, 0, 0, 0],
+                [0, 0, 0, 0],
+                [0, 1, 1, 1]])
+
+m_1, m_2, m_3, m_4 = sp.symbols('m_1, m_2, m_3 m_4')
+m = sp.Matrix([
+        [m_1, 0, 0],
+        [0, m_2, 0],
+        [0, 0, m_3],
+    ])
+d_1 = sp.Symbol('d_1') #0.04288
+L_2 = sp.Symbol('L_2') #0.057755
+L_3 = sp.Symbol('L_3')#0.057755
+L_4 = sp.Symbol('L_4')#0.055798
+h_1 = sp.Symbol('h_1')#0.02215
+h_2 = sp.Symbol('h_2')#0.02215
+h_3 = sp.Symbol('h_3')#0.02215
+h_4 = sp.Symbol('h_4')#0.02215
+w_1 = sp.Symbol('w_1')#0.03460
+w_2 = sp.Symbol('w_2')#0.03460
+w_3 = sp.Symbol('w_3')#0.03460
+w_4 = sp.Symbol('w_4')#0.03460
+
+
+Ix1 =(1/12)*m_1*(d_1**2+h_1**2)
+Iy1 =(1/12)*m_1*(w_1**2+h_1**2)
+Iz1 =(1/12)*m_1*(w_1**2+d_1**2)
+
+Ix2 =(1/12)*m_2*(L_2**2+h_2**2)
+Iy2 =(1/12)*m_2*(w_2**2+h_2**2)
+Iz2 =(1/12)*m_2*(w_2**2+L_2**2)
+
+Ix3 =(1/12)*m_3*(L_3**2+h_3**2)
+Iy3 =(1/12)*m_3*(w_3**2+h_3**2)
+Iz3 =(1/12)*m_3*(w_3**2+L_3**2)
+
+Ix4 =(1/12)*m_4*(L_4**2+h_4**2)
+Iy4 =(1/12)*m_4*(w_4**2+h_4**2)
+Iz4 =(1/12)*m_4*(w_4**2+L_4**2)
+
+I1 = sp.Matrix([
+            [Ix1, 0, 0],
+            [0, Iy1, 0],
+            [0, 0, Iz1]
+                ])
+I2 = sp.Matrix([
+            [Ix2, 0, 0],
+            [0, Iy2, 0],
+            [0, 0, Iz2]
+    ])
+I3 = sp.Matrix([
+            [Ix3, 0, 0],
+            [0, Iy3, 0],
+            [0, 0, Iz3]
+    ])
+I4 = sp.Matrix([
+            [Ix4, 0, 0],
+            [0, Iy4, 0],
+            [0, 0, Iz4]
+    ])
+
+
+print('linear M: ')
+MLinear = Jv.T@(m@Jv)
+sp.pprint(MLinear)
+
+MAngular1 = Jw.T@(I1@Jw)
+MAngular2 = Jw.T@(I2@Jw)
+MAngular3 = Jw.T@(I3@Jw)
+MAngular4 = Jw.T@(I4@Jw)
+MAngular = MAngular1+MAngular2+MAngular3+MAngular4
+
+M = sp.Matrix([MLinear + MAngular])
+print('M is given by :')
+print(M)
+print(sp.shape(M))
+#finding the coriolis matrix:
+theta = sp.symbols('theta_1:5')
+dtheta = sp.symbols('dtheta_1:5')
+
+C = sp.Matrix(4,4, lambda i, j: sum(
+    0.5*(M[i,j].diff(theta[k])+M[i,k].diff(theta[j]) -M[j,k].diff(theta[i]))*dtheta[k]
+    for k in range(4)
+))
+print('C is given by: ')
+print(C)
+
+#finding taug
+g = 9.81
+#centre of mass heights for each link
+ch_1 = (d_1/2)*sp.sin(theta_1)
+ch_2 = d_1*sp.sin(theta_1) + (L_2/2)*sp.sin(theta_1+theta_2)
+ch_3 = d_1*sp.sin(theta_1) + L_2*sp.sin(theta_1+theta_2)+ (L_3/2)*sp.sin(theta_1 + theta_2 + theta_3)
+ch_4 = d_1*sp.sin(theta_1) + L_2*sp.sin(theta_1+theta_2)+ L_3*sp.sin(theta_1+theta_2+theta_3)+ (L_4/2)*sp.sin(theta_1+theta_2+theta_3+theta_4)
+
+U = g*(m_1*ch_1+m_2*ch_2+m_3*ch_3+m_4*ch_4)
+
+taug1 = sp.diff(U, theta_1)
+taug2 = sp.diff(U, theta_2)
+taug3 = sp.diff(U, theta_3)
+taug4 = sp.diff(U, theta_4)
+
+print('Taug1 =  ')
+print(taug1)
+print('Taug2 = ')
+print(taug2)
+print('Taug3 =  ')
+print(taug3)
+print('Taug4 = ')
+print(taug4)
