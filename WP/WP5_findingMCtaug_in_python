@@ -68,7 +68,7 @@ m = sp.Matrix([
         [0, m_3, 0],
         [0, 0, m_4],
     ])
-d_1 = sp.Symbol('d_1') #0.04288
+a_1 = sp.Symbol('a_1') #0.04288
 L_2 = sp.Symbol('L_2') #0.057755
 L_3 = sp.Symbol('L_3')#0.057755
 L_4 = sp.Symbol('L_4')#0.055798
@@ -82,9 +82,9 @@ w_3 = sp.Symbol('w_3')#0.03460
 w_4 = sp.Symbol('w_4')#0.03460
 
 
-Ix1 =(1/12)*m_1*(d_1**2+h_1**2)
+Ix1 =(1/12)*m_1*(a_1**2+h_1**2)
 Iy1 =(1/12)*m_1*(w_1**2+h_1**2)
-Iz1 =(1/12)*m_1*(w_1**2+d_1**2)
+Iz1 =(1/12)*m_1*(w_1**2+a_1**2)
 
 Ix2 =(1/12)*m_2*(L_2**2+h_2**2)
 Iy2 =(1/12)*m_2*(w_2**2+h_2**2)
@@ -148,10 +148,10 @@ print(C)
 #finding taug
 g = 9.81
 #centre of mass heights for each link
-ch_1 = (d_1/2)*sp.sin(theta_1)
-ch_2 = d_1*sp.sin(theta_1) + (L_2/2)*sp.sin(theta_1+theta_2)
-ch_3 = d_1*sp.sin(theta_1) + L_2*sp.sin(theta_1+theta_2)+ (L_3/2)*sp.sin(theta_1 + theta_2 + theta_3)
-ch_4 = d_1*sp.sin(theta_1) + L_2*sp.sin(theta_1+theta_2)+ L_3*sp.sin(theta_1+theta_2+theta_3)+ (L_4/2)*sp.sin(theta_1+theta_2+theta_3+theta_4)
+ch_1 = (a_1/2)*sp.sin(theta_1)
+ch_2 = a_1*sp.sin(theta_1) + (L_2/2)*sp.sin(theta_1+theta_2)
+ch_3 = a_1*sp.sin(theta_1) + L_2*sp.sin(theta_1+theta_2)+ (L_3/2)*sp.sin(theta_1 + theta_2 + theta_3)
+ch_4 = a_1*sp.sin(theta_1) + L_2*sp.sin(theta_1+theta_2)+ L_3*sp.sin(theta_1+theta_2+theta_3)+ (L_4/2)*sp.sin(theta_1+theta_2+theta_3+theta_4)
 
 U = g*(m_1*ch_1+m_2*ch_2+m_3*ch_3+m_4*ch_4)
 
