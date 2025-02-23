@@ -168,6 +168,8 @@ ch_2 = a_1*sp.sin(theta_1) + (L_2/2)*sp.sin(theta_1+theta_2)
 ch_3 = a_1*sp.sin(theta_1) + L_2*sp.sin(theta_1+theta_2)+ (L_3/2)*sp.sin(theta_1 + theta_2 + theta_3)
 ch_4 = a_1*sp.sin(theta_1) + L_2*sp.sin(theta_1+theta_2)+ L_3*sp.sin(theta_1+theta_2+theta_3)+ (L_4/2)*sp.sin(theta_1+theta_2+theta_3+theta_4)
 
+
+#the potential energy
 U = g*(m_1*ch_1+m_2*ch_2+m_3*ch_3+m_4*ch_4)
 
 taug1 = sp.diff(U, theta_1)
