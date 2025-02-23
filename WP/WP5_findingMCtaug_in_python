@@ -152,7 +152,7 @@ theta = sp.symbols('theta_1:5')
 dtheta = sp.symbols('dtheta_1:5')
 
 
-
+#finding the Coriolis matrix using Christoffel symbols
 C = sp.Matrix(4,4, lambda i, j: sum(
     0.5*(M[i,j].diff(theta[k])+M[i,k].diff(theta[j]) -M[j,k].diff(theta[i]))*dtheta[k]
     for k in range(4)
