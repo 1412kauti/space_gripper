@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 """
 Computing the Jacobian using the known values of x_1, x_2, x_3, and phi
-and then using this to find the inertia matrix M(q)
+and then using this to find the inertia matrix M(theta), Coriolis Matrix C(theta, dtheta) and the
+gravitational torque vector taug(theta)
 """
 import sympy as sp
 
@@ -9,18 +10,21 @@ theta_1, theta_2, theta_3, theta_4 = sp.symbols('theta_1, theta_2, theta_3, thet
 d_1, L_2, L_3, L_4 = sp.symbols('d_1 L_2 L_3 L_4')
 a_1 = sp.Symbol('a_1')
 
+# end effector positions (4th column of the FK transformation matrix and phi
 x_1 = sp.cos(theta_1)*(L_4*sp.cos(theta_2+theta_3+theta_4)+L_3*sp.cos(theta_2+theta_3)+L_2*sp.cos(theta_2)+a_1)
 x_2 = sp.sin(theta_1)*(L_4*sp.cos(theta_2+theta_3+theta_4)+L_3*sp.cos(theta_2+theta_3)+L_2*sp.cos(theta_2)+a_1)
 x_3 = L_4*sp.sin(theta_2+theta_3+theta_4) + L_3*sp.sin(theta_2+theta_3) + L_2*sp.sin(theta_2)+d_1
 phi = theta_1+theta_2+theta_3+theta_4
 
-X = sp.Matrix([[x_1],
+X = sp.Matrix([[x_1],     
      [x_2],
      [x_3],
      [phi],
      ])
 print('X is given by: ')
 sp.pprint(X)
+
+#finding the elements of the jacobian matrix
 
 dx_1dtheta_1 = sp.diff(x_1, theta_1)
 dx_1dtheta_2 = sp.diff(x_1, theta_2)
@@ -53,15 +57,19 @@ jacobianMatrix = sp.simplify(jacobianMatrix)
 print('Full Jacobian Matrix: ')
 sp.pprint(jacobianMatrix)
 
+#linear component of Jacobian
 Jv = sp.Matrix([
     [dx_1dtheta_1, dx_1dtheta_2, dx_1dtheta_3, dx_1dtheta_4],
     [dx_2dtheta_1, dx_2dtheta_2, dx_2dtheta_3, dx_2dtheta_4],
     [dx_3dtheta_1, dx_3dtheta_2, dx_3dtheta_3, dx_3dtheta_4]
     ])
+
+#angular component of Jacobian
 Jw = sp.Matrix([[1, 0, 0, 0],
                 [0, 0, 0, 0],
                 [0, 1, 1, 1]])
 
+#mass matrix, since m_1 doesn't move, m_2 m_3 and m_4 only contribute to the inertia matrix
 m_1, m_2, m_3, m_4 = sp.symbols('m_1, m_2, m_3 m_4')
 m = sp.Matrix([
         [m_2, 0, 0],
@@ -81,6 +89,7 @@ w_2 = sp.Symbol('w_2')#0.03460
 w_3 = sp.Symbol('w_3')#0.03460
 w_4 = sp.Symbol('w_4')#0.03460
 
+#inertia tensor components for each link
 
 Ix1 =(1/12)*m_1*(a_1**2+h_1**2)
 Iy1 =(1/12)*m_1*(w_1**2+h_1**2)
@@ -98,6 +107,7 @@ Ix4 =(1/12)*m_4*(L_4**2+h_4**2)
 Iy4 =(1/12)*m_4*(w_4**2+h_4**2)
 Iz4 =(1/12)*m_4*(w_4**2+L_4**2)
 
+#inertia tensors
 I1 = sp.Matrix([
             [Ix1, 0, 0],
             [0, Iy1, 0],
@@ -120,16 +130,19 @@ I4 = sp.Matrix([
     ])
 
 
+#linear inertia matrix
 print('linear M: ')
 MLinear = Jv.T@(m@Jv)
 sp.pprint(MLinear)
 
+#angular inertia matrices
 MAngular1 = Jw.T@(I1@Jw)
 MAngular2 = Jw.T@(I2@Jw)
 MAngular3 = Jw.T@(I3@Jw)
 MAngular4 = Jw.T@(I4@Jw)
 MAngular = MAngular1+MAngular2+MAngular3+MAngular4
 
+#full inertia matrix
 M = sp.Matrix([MLinear + MAngular])
 print('M is given by :')
 print(M)
@@ -137,6 +150,8 @@ print(sp.shape(M))
 #finding the coriolis matrix:
 theta = sp.symbols('theta_1:5')
 dtheta = sp.symbols('dtheta_1:5')
+
+
 
 C = sp.Matrix(4,4, lambda i, j: sum(
     0.5*(M[i,j].diff(theta[k])+M[i,k].diff(theta[j]) -M[j,k].diff(theta[i]))*dtheta[k]
