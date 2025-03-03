@@ -1,0 +1,7 @@
+<launch>
+  <rosparam file="$(find fusion2urdf)/launch/Space_Gripper_URDF_controller.yaml" command="load"/>
+  <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false" output="screen" ns="Space_Gripper_URDF" args="finger_joint_1_1_position_controller finger_joint_1_2_position_controller finger_joint_1_3_position_controller finger_joint_3_1_position_controller finger_joint_3_2_position_controller finger_joint_3_3_position_controller finger_joint_2_1_position_controller finger_joint_2_2_position_controller finger_joint_2_3_position_controller palm_joint_1_position_controller palm_joint_2_position_controller palm_joint_3_position_controller joint_state_controller"/>
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" respawn="false" output="screen">
+    <remap from="/joint_states" to="/Space_Gripper_URDF/joint_states"/>
+  </node>
+</launch>
