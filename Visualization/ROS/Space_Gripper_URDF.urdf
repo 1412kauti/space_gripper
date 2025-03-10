@@ -1,270 +1,301 @@
 <?xml version="1.0" ?>
 <robot name="Space_Gripper_URDF">
+
+<!-- <material name="silver">
+  <color rgba="0.700 0.700 0.700 1.000"/>
+</material> -->
+
 <link name="base_link">
   <inertial>
-    <origin xyz="0.282408 -0.017479 -0.008956" rpy="0 0 0"/>
-    <mass value="0.196862"/>
-    <inertia ixx="0.000143" iyy="0.000143" izz="0.00022" ixy="-0.0" iyz="0.000529" ixz="-0.000529"/>
+    <origin xyz="0.2824084412039216 -0.01747868073746133 -0.008955658350251127" rpy="0 0 0"/>
+    <mass value="0.19686239672755595"/>
+    <inertia ixx="0.00014285242604510797" iyy="0.00014289312332895626" izz="0.0002203151480814937" ixy="-1.4233796433171797e-13" iyz="-5.3266947601902925e-14" ixz="4.087505542588535e-09"/>
   </inertial>
   <visual>
     <origin xyz="0 0 0" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="package://fusion2urdf/Space_Gripper_URDF/bin_stl/base_link_m-binary.stl"/>
-    </geometry>
-
+      <mesh filename="meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+        <!-- </geometry>
+    <material name="silver"/>
+    <material/> -->
   </visual>
   <collision>
     <origin xyz="0 0 0" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="package://fusion2urdf/Space_Gripper_URDF/bin_stl/base_link_m-binary.stl"/>
+      <mesh filename="meshes/base_link.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
-<link name="finger_link11_1">
+
+<link name="finger_link111">
   <inertial>
-    <origin xyz="-0.018205 0.00015899999999999942 0.0019930000000000004" rpy="0 0 0"/>
-    <mass value="0.058758"/>
-    <inertia ixx="1.2e-05" iyy="2.6e-05" izz="2.9e-05" ixy="0.0" iyz="-4.8e-05" ixz="5e-05"/>
+    <origin xyz="-0.018205227017697667 0.00015866735729531262 0.0019933440227124246" rpy="0 0 0"/>
+    <mass value="0.058757815724503226"/>
+    <inertia ixx="1.2086298377185494e-05" iyy="2.5715164283030044e-05" izz="2.879228567865405e-05" ixy="2.2279874047472035e-07" iyz="-5.4872261887554326e-08" ixz="1.5145439632609564e-06"/>
   </inertial>
   <visual>
     <origin xyz="-0.18625 0.015983 -0.002636" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="package://fusion2urdf/Space_Gripper_URDF/bin_stl/finger_link11_1_m-binary.stl"/>
-    </geometry>
-
+      <mesh filename="meshes/finger_link111.stl" scale="0.001 0.001 0.001"/>
+        <!-- </geometry>
+    <material name="silver"/>
+    <material/> -->
   </visual>
   <collision>
     <origin xyz="-0.18625 0.015983 -0.002636" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="package://fusion2urdf/Space_Gripper_URDF/bin_stl/finger_link11_1_m-binary.stl"/>
+      <mesh filename="meshes/finger_link111.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
-<link name="finger_link12_1">
+
+<link name="finger_link121">
   <inertial>
-    <origin xyz="-0.018205000000000013 0.00015899999999999942 0.0019930000000000004" rpy="0 0 0"/>
-    <mass value="0.058758"/>
-    <inertia ixx="1.2e-05" iyy="2.6e-05" izz="2.9e-05" ixy="0.0" iyz="-3.2e-05" ixz="3.3e-05"/>
+    <origin xyz="-0.01820463486106834 0.00015866628118000464 0.001993344022712669" rpy="0 0 0"/>
+    <mass value="0.05875781572450322"/>
+    <inertia ixx="1.2086298377186012e-05" iyy="2.571516428301183e-05" izz="2.8792285678610357e-05" ixy="2.2279874047543863e-07" iyz="-5.4872261887839776e-08" ixz="1.5145439632596588e-06"/>
   </inertial>
   <visual>
     <origin xyz="-0.12573 0.015983 -0.002636" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="package://fusion2urdf/Space_Gripper_URDF/bin_stl/finger_link12_1_m-binary.stl"/>
-    </geometry>
-
+      <mesh filename="meshes/finger_link121.stl" scale="0.001 0.001 0.001"/>
+        <!-- </geometry>
+    <material name="silver"/>
+    <material/> -->
   </visual>
   <collision>
     <origin xyz="-0.12573 0.015983 -0.002636" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="package://fusion2urdf/Space_Gripper_URDF/bin_stl/finger_link12_1_m-binary.stl"/>
+      <mesh filename="meshes/finger_link121.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
-<link name="finger_link31_1">
+
+<link name="finger_link311">
   <inertial>
-    <origin xyz="0.009240000000000026 0.015686999999999993 0.0019930000000000004" rpy="0 0 0"/>
-    <mass value="0.058758"/>
-    <inertia ixx="2.2e-05" iyy="1.6e-05" izz="2.9e-05" ixy="-6e-06" iyz="-7.2e-05" ixz="7e-05"/>
+    <origin xyz="0.009239967439434893 0.015687081058691682 0.0019933440227124254" rpy="0 0 0"/>
+    <mass value="0.058757815724503115"/>
+    <inertia ixx="2.2114998447879657e-05" iyy="1.5686464226054297e-05" izz="2.8792285692595156e-05" ixy="-6.012871425806199e-06" iyz="-1.2841974334595889e-06" ixz="-8.047927642447679e-07"/>
   </inertial>
   <visual>
     <origin xyz="-0.331752 -0.065031 -0.002636" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="package://fusion2urdf/Space_Gripper_URDF/bin_stl/finger_link31_1_m-binary.stl"/>
-    </geometry>
-
+      <mesh filename="meshes/finger_link311.stl" scale="0.001 0.001 0.001"/>
+        <!-- </geometry>
+    <material name="silver"/>
+    <material/> -->
   </visual>
   <collision>
     <origin xyz="-0.331752 -0.065031 -0.002636" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="package://fusion2urdf/Space_Gripper_URDF/bin_stl/finger_link31_1_m-binary.stl"/>
+      <mesh filename="meshes/finger_link311.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
-<link name="finger_link32_1">
+
+<link name="finger_link321">
   <inertial>
-    <origin xyz="0.009240000000000026 0.01568599999999999 0.0019930000000000004" rpy="0 0 0"/>
-    <mass value="0.058758"/>
-    <inertia ixx="2.2e-05" iyy="1.6e-05" izz="2.9e-05" ixy="-6e-06" iyz="-6.6e-05" ixz="6.3e-05"/>
+    <origin xyz="0.009239670429177227 0.015686426211100155 0.001993344022712691" rpy="0 0 0"/>
+    <mass value="0.05875781572450316"/>
+    <inertia ixx="2.2114998447879657e-05" iyy="1.5686464226057767e-05" izz="2.8792285692599492e-05" ixy="-6.0128714258079335e-06" iyz="-1.2841974334595448e-06" ixz="-8.047927642447679e-07"/>
   </inertial>
   <visual>
     <origin xyz="-0.362012 -0.117443 -0.002636" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="package://fusion2urdf/Space_Gripper_URDF/bin_stl/finger_link32_1_m-binary.stl"/>
-    </geometry>
-
+      <mesh filename="meshes/finger_link321.stl" scale="0.001 0.001 0.001"/>
+        <!-- </geometry>
+    <material name="silver"/>
+    <material/> -->
   </visual>
   <collision>
     <origin xyz="-0.362012 -0.117443 -0.002636" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="package://fusion2urdf/Space_Gripper_URDF/bin_stl/finger_link32_1_m-binary.stl"/>
+      <mesh filename="meshes/finger_link321.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
-<link name="finger_link21_1">
+
+<link name="finger_link211">
   <inertial>
-    <origin xyz="0.008965 -0.015846 0.0019930000000000004" rpy="0 0 0"/>
-    <mass value="0.058758"/>
-    <inertia ixx="2.2e-05" iyy="1.5e-05" izz="2.9e-05" ixy="6e-06" iyz="-0.000125" ixz="0.000125"/>
+    <origin xyz="0.008964553001198305 -0.0158457897051294 0.001993344022712414" rpy="0 0 0"/>
+    <mass value="0.05875781572450313"/>
+    <inertia ixx="2.250089717573448e-05" iyy="1.530056548438609e-05" izz="2.8792285678780685e-05" ixy="5.7900726794343944e-06" iyz="1.3390696782788821e-06" ixz="-7.097512088737208e-07"/>
   </inertial>
   <visual>
     <origin xyz="-0.329162 0.101484 -0.002636" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="package://fusion2urdf/Space_Gripper_URDF/bin_stl/finger_link21_1_m-binary.stl"/>
-    </geometry>
-
+      <mesh filename="meshes/finger_link211.stl" scale="0.001 0.001 0.001"/>
+        <!-- </geometry>
+    <material name="silver"/>
+    <material/> -->
   </visual>
   <collision>
     <origin xyz="-0.329162 0.101484 -0.002636" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="package://fusion2urdf/Space_Gripper_URDF/bin_stl/finger_link21_1_m-binary.stl"/>
+      <mesh filename="meshes/finger_link211.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
-<link name="finger_link22_1">
+
+<link name="finger_link221">
   <inertial>
-    <origin xyz="0.008965 -0.015844999999999998 0.0019930000000000004" rpy="0 0 0"/>
-    <mass value="0.058758"/>
-    <inertia ixx="2.2e-05" iyy="1.5e-05" izz="2.9e-05" ixy="6e-06" iyz="-0.000147" ixz="0.000148"/>
+    <origin xyz="0.008965257854827213 -0.01584513378142255 0.0019933440227126796" rpy="0 0 0"/>
+    <mass value="0.05875781572450321"/>
+    <inertia ixx="2.250089717573448e-05" iyy="1.530056548438609e-05" izz="2.879228567878242e-05" ixy="5.790072679435262e-06" iyz="1.3390696782788347e-06" ixz="-7.097512088737615e-07"/>
   </inertial>
   <visual>
     <origin xyz="-0.359421 0.153896 -0.002636" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="package://fusion2urdf/Space_Gripper_URDF/bin_stl/finger_link22_1_m-binary.stl"/>
-    </geometry>
-
+      <mesh filename="meshes/finger_link221.stl" scale="0.001 0.001 0.001"/>
+        <!-- </geometry>
+    <material name="silver"/>
+    <material/> -->
   </visual>
   <collision>
     <origin xyz="-0.359421 0.153896 -0.002636" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="package://fusion2urdf/Space_Gripper_URDF/bin_stl/finger_link22_1_m-binary.stl"/>
+      <mesh filename="meshes/finger_link221.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
-<link name="palm_link1_1">
+
+<link name="palm_link11">
   <inertial>
-    <origin xyz="-0.03380799999999998 0.00032100000000000184 0.004860000000000001" rpy="0 0 0"/>
-    <mass value="0.04512"/>
-    <inertia ixx="2e-05" iyy="2.2e-05" izz="1.8e-05" ixy="0.0" iyz="5.5e-05" ixz="-5.5e-05"/>
+    <origin xyz="-0.033808036955607745 0.0003209242466304836 0.004859626131341327" rpy="0 0 0"/>
+    <mass value="0.04512002505288437"/>
+    <inertia ixx="1.955569656739964e-05" iyy="2.2266615430205448e-05" izz="1.8449937761857993e-05" ixy="2.5455755867535086e-07" iyz="-1.2175243086354105e-07" ixz="8.540751990812511e-07"/>
   </inertial>
   <visual>
     <origin xyz="-0.252173 0.016479 0.010014" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="package://fusion2urdf/Space_Gripper_URDF/bin_stl/palm_link1_1_m-binary.stl"/>
-    </geometry>
-
+      <mesh filename="meshes/palm_link11.stl" scale="0.001 0.001 0.001"/>
+        <!-- </geometry>
+    <material name="silver"/>
+    <material/> -->
   </visual>
   <collision>
     <origin xyz="-0.252173 0.016479 0.010014" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="package://fusion2urdf/Space_Gripper_URDF/bin_stl/palm_link1_1_m-binary.stl"/>
+      <mesh filename="meshes/palm_link11.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
-<link name="palm_link3_1">
+
+<link name="palm_link31">
   <inertial>
-    <origin xyz="0.01718200000000003 0.029117999999999998 0.004860000000000001" rpy="0 0 0"/>
-    <mass value="0.04512"/>
-    <inertia ixx="2.1e-05" iyy="2e-05" izz="1.8e-05" ixy="-1e-06" iyz="6.4e-05" ixz="-6.5e-05"/>
+    <origin xyz="0.017181842395234237 0.029118389688091016 0.00485962613541978" rpy="0 0 0"/>
+    <mass value="0.04512002511118017"/>
+    <inertia ixx="2.136843242511441e-05" iyy="2.0453879616765848e-05" izz="1.8449937789699437e-05" ixy="-1.3011410833712158e-06" iyz="-6.787746076151967e-07" ixz="-5.324782961754261e-07"/>
   </inertial>
   <visual>
     <origin xyz="-0.298361 -0.008188 0.010014" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="package://fusion2urdf/Space_Gripper_URDF/bin_stl/palm_link3_1_m-binary.stl"/>
-    </geometry>
-
+      <mesh filename="meshes/palm_link31.stl" scale="0.001 0.001 0.001"/>
+        <!-- </geometry>
+    <material name="silver"/>
+    <material/> -->
   </visual>
   <collision>
     <origin xyz="-0.298361 -0.008188 0.010014" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="package://fusion2urdf/Space_Gripper_URDF/bin_stl/palm_link3_1_m-binary.stl"/>
+      <mesh filename="meshes/palm_link31.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
-<link name="palm_link2_1">
+
+<link name="palm_link21">
   <inertial>
-    <origin xyz="0.01662600000000003 -0.029438 0.004860000000000001" rpy="0 0 0"/>
-    <mass value="0.04512"/>
-    <inertia ixx="2.2e-05" iyy="2e-05" izz="1.8e-05" ixy="1e-06" iyz="9e-05" ixz="-8.9e-05"/>
+    <origin xyz="0.016626487983982474 -0.029438355242833773 0.004859626135419766" rpy="0 0 0"/>
+    <mass value="0.04512002511118007"/>
+    <inertia ixx="2.180933905096083e-05" iyy="2.0012972990917678e-05" izz="1.8449937789695968e-05" ixy="1.0465835242510439e-06" iyz="8.005270352593836e-07" ixz="-3.215969055509328e-07"/>
   </inertial>
   <visual>
     <origin xyz="-0.296629 0.044146 0.010014" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="package://fusion2urdf/Space_Gripper_URDF/bin_stl/palm_link2_1_m-binary.stl"/>
-    </geometry>
-
+      <mesh filename="meshes/palm_link21.stl" scale="0.001 0.001 0.001"/>
+        <!-- </geometry>
+    <material name="silver"/>
+    <material/> -->
   </visual>
   <collision>
     <origin xyz="-0.296629 0.044146 0.010014" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="package://fusion2urdf/Space_Gripper_URDF/bin_stl/palm_link2_1_m-binary.stl"/>
+      <mesh filename="meshes/palm_link21.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
-<link name="finger_link33_1">
+
+<link name="finger_link331">
   <inertial>
-    <origin xyz="0.0065810000000000035 0.010213 0.0006810000000000002" rpy="0 0 0"/>
-    <mass value="0.165174"/>
-    <inertia ixx="3.6e-05" iyy="2.6e-05" izz="4.7e-05" ixy="-8e-06" iyz="-0.000121" ixz="0.000118"/>
+    <origin xyz="0.006580644907470845 0.010213337766440012 0.0006812023715423755" rpy="0 0 0"/>
+    <mass value="0.16517380192142656"/>
+    <inertia ixx="3.569351063319615e-05" iyy="2.5648158742050398e-05" izz="4.740029969131643e-05" ixy="-8.28223425292443e-06" iyz="-1.4431304438412276e-06" ixz="-8.488219023201991e-07"/>
   </inertial>
   <visual>
     <origin xyz="-0.392271 -0.169854 -0.002636" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="package://fusion2urdf/Space_Gripper_URDF/bin_stl/finger_link33_1_m-binary.stl"/>
-    </geometry>
-
+      <mesh filename="meshes/finger_link331.stl" scale="0.001 0.001 0.001"/>
+        <!-- </geometry>
+    <material name="silver"/>
+    <material/> -->
   </visual>
   <collision>
     <origin xyz="-0.392271 -0.169854 -0.002636" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="package://fusion2urdf/Space_Gripper_URDF/bin_stl/finger_link33_1_m-binary.stl"/>
+      <mesh filename="meshes/finger_link331.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
-<link name="finger_link23_1">
+
+<link name="finger_link231">
   <inertial>
-    <origin xyz="0.005554999999999977 -0.010805000000000009 0.0006810000000000002" rpy="0 0 0"/>
-    <mass value="0.165174"/>
-    <inertia ixx="3.5e-05" iyy="2.6e-05" izz="4.7e-05" ixy="8e-06" iyz="-0.000336" ixz="0.000337"/>
+    <origin xyz="0.005554694432288676 -0.010805368616512767 0.0006812023713554795" rpy="0 0 0"/>
+    <mass value="0.1651738019238477"/>
+    <inertia ixx="3.5332121978338786e-05" iyy="2.6009547398075233e-05" izz="4.7400299691961745e-05" ixy="8.490882090362445e-06" iyz="1.4566665525227114e-06" ixz="-8.25376673711922e-07"/>
   </inertial>
   <visual>
     <origin xyz="-0.389681 0.206307 -0.002636" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="package://fusion2urdf/Space_Gripper_URDF/bin_stl/finger_link23_1_m-binary.stl"/>
-    </geometry>
-
+      <mesh filename="meshes/finger_link231.stl" scale="0.001 0.001 0.001"/>
+        <!-- </geometry>
+    <material name="silver"/>
+    <material/> -->
   </visual>
   <collision>
     <origin xyz="-0.389681 0.206307 -0.002636" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="package://fusion2urdf/Space_Gripper_URDF/bin_stl/finger_link23_1_m-binary.stl"/>
+      <mesh filename="meshes/finger_link231.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
-<link name="finger_link13_1">
+
+<link name="finger_link131">
   <inertial>
-    <origin xyz="-0.012135000000000007 0.0005920000000000005 0.0006810000000000002" rpy="0 0 0"/>
-    <mass value="0.165174"/>
-    <inertia ixx="2.1e-05" iyy="4e-05" izz="4.7e-05" ixy="-0.0" iyz="-3.6e-05" ixz="3.7e-05"/>
+    <origin xyz="-0.01213504592562506 0.0005919895453446421 0.0006812023713554834" rpy="0 0 0"/>
+    <mass value="0.16517380192384765"/>
+    <inertia ixx="2.0986871452349138e-05" iyy="4.035479792407093e-05" izz="4.740029969198473e-05" ixy="-2.086478375921334e-07" iyz="-1.3536109135468065e-08" ixz="1.6741985761834893e-06"/>
   </inertial>
   <visual>
     <origin xyz="-0.065211 0.015983 -0.002636" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="package://fusion2urdf/Space_Gripper_URDF/bin_stl/finger_link13_1_m-binary.stl"/>
-    </geometry>
-
+      <mesh filename="meshes/finger_link131.stl" scale="0.001 0.001 0.001"/>
+        <!-- </geometry>
+    <material name="silver"/>
+    <material/> -->
   </visual>
   <collision>
     <origin xyz="-0.065211 0.015983 -0.002636" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="package://fusion2urdf/Space_Gripper_URDF/bin_stl/finger_link13_1_m-binary.stl"/>
+      <mesh filename="meshes/finger_link131.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
+
 <joint name="finger_joint_1_1" type="revolute">
   <origin xyz="-0.065923 0.000496 0.01265" rpy="0 0 0"/>
-  <parent link="palm_link1_1"/>
-  <child link="finger_link11_1"/>
-  <axis xyz="-0.0 -0.01 0.0"/>
+  <parent link="palm_link11"/>
+  <child link="finger_link111"/>
+  <axis xyz="-0.0 -1.0 0.0"/>
   <limit upper="0.0" lower="-1.570796" effort="100" velocity="100"/>
 </joint>
 <transmission name="finger_joint_1_1_tran">
@@ -277,11 +308,12 @@
     <mechanicalReduction>1</mechanicalReduction>
   </actuator>
 </transmission>
+
 <joint name="finger_joint_1_2" type="revolute">
   <origin xyz="-0.06052 0.0 0.0" rpy="0 0 0"/>
-  <parent link="finger_link11_1"/>
-  <child link="finger_link12_1"/>
-  <axis xyz="0.0 0.01 0.0"/>
+  <parent link="finger_link111"/>
+  <child link="finger_link121"/>
+  <axis xyz="0.0 1.0 0.0"/>
   <limit upper="1.570796" lower="0.0" effort="100" velocity="100"/>
 </joint>
 <transmission name="finger_joint_1_2_tran">
@@ -294,11 +326,12 @@
     <mechanicalReduction>1</mechanicalReduction>
   </actuator>
 </transmission>
+
 <joint name="finger_joint_3_1" type="revolute">
   <origin xyz="0.033391 0.056843 0.01265" rpy="0 0 0"/>
-  <parent link="palm_link3_1"/>
-  <child link="finger_link31_1"/>
-  <axis xyz="-0.00866 0.005 0.0"/>
+  <parent link="palm_link31"/>
+  <child link="finger_link311"/>
+  <axis xyz="-0.866025 0.5 0.0"/>
   <limit upper="0.0" lower="-1.570796" effort="100" velocity="100"/>
 </joint>
 <transmission name="finger_joint_3_1_tran">
@@ -311,11 +344,12 @@
     <mechanicalReduction>1</mechanicalReduction>
   </actuator>
 </transmission>
+
 <joint name="finger_joint_3_2" type="revolute">
   <origin xyz="0.03026 0.052412 0.0" rpy="0 0 0"/>
-  <parent link="finger_link31_1"/>
-  <child link="finger_link32_1"/>
-  <axis xyz="-0.00866 0.005 -0.0"/>
+  <parent link="finger_link311"/>
+  <child link="finger_link321"/>
+  <axis xyz="-0.866025 0.5 -0.0"/>
   <limit upper="0.0" lower="-1.570796" effort="100" velocity="100"/>
 </joint>
 <transmission name="finger_joint_3_2_tran">
@@ -328,11 +362,12 @@
     <mechanicalReduction>1</mechanicalReduction>
   </actuator>
 </transmission>
+
 <joint name="finger_joint_2_1" type="revolute">
   <origin xyz="0.032533 -0.057338 0.01265" rpy="0 0 0"/>
-  <parent link="palm_link2_1"/>
-  <child link="finger_link21_1"/>
-  <axis xyz="-0.00866 -0.005 -0.0"/>
+  <parent link="palm_link21"/>
+  <child link="finger_link211"/>
+  <axis xyz="-0.866025 -0.5 -0.0"/>
   <limit upper="1.570796" lower="0.0" effort="100" velocity="100"/>
 </joint>
 <transmission name="finger_joint_2_1_tran">
@@ -345,11 +380,12 @@
     <mechanicalReduction>1</mechanicalReduction>
   </actuator>
 </transmission>
+
 <joint name="finger_joint_2_2" type="revolute">
   <origin xyz="0.030259 -0.052412 0.0" rpy="0 0 0"/>
-  <parent link="finger_link21_1"/>
-  <child link="finger_link22_1"/>
-  <axis xyz="-0.00866 -0.005 0.0"/>
+  <parent link="finger_link211"/>
+  <child link="finger_link221"/>
+  <axis xyz="-0.866025 -0.5 0.0"/>
   <limit upper="1.570796" lower="0.0" effort="100" velocity="100"/>
 </joint>
 <transmission name="finger_joint_2_2_tran">
@@ -362,11 +398,12 @@
     <mechanicalReduction>1</mechanicalReduction>
   </actuator>
 </transmission>
+
 <joint name="palm_joint_1" type="revolute">
   <origin xyz="0.252173 -0.016479 -0.010014" rpy="0 0 0"/>
   <parent link="base_link"/>
-  <child link="palm_link1_1"/>
-  <axis xyz="-0.0 0.0 0.01"/>
+  <child link="palm_link11"/>
+  <axis xyz="-0.0 0.0 1.0"/>
   <limit upper="0.523599" lower="-0.523599" effort="100" velocity="100"/>
 </joint>
 <transmission name="palm_joint_1_tran">
@@ -379,11 +416,12 @@
     <mechanicalReduction>1</mechanicalReduction>
   </actuator>
 </transmission>
+
 <joint name="palm_joint_2" type="revolute">
   <origin xyz="0.298361 0.008188 -0.010014" rpy="0 0 0"/>
   <parent link="base_link"/>
-  <child link="palm_link3_1"/>
-  <axis xyz="-0.0 0.0 -0.01"/>
+  <child link="palm_link31"/>
+  <axis xyz="-0.0 0.0 -1.0"/>
   <limit upper="0.523599" lower="-0.523599" effort="100" velocity="100"/>
 </joint>
 <transmission name="palm_joint_2_tran">
@@ -396,11 +434,12 @@
     <mechanicalReduction>1</mechanicalReduction>
   </actuator>
 </transmission>
+
 <joint name="palm_joint_3" type="revolute">
   <origin xyz="0.296629 -0.044146 -0.010014" rpy="0 0 0"/>
   <parent link="base_link"/>
-  <child link="palm_link2_1"/>
-  <axis xyz="-0.0 -0.0 0.01"/>
+  <child link="palm_link21"/>
+  <axis xyz="-0.0 -0.0 1.0"/>
   <limit upper="0.523599" lower="-0.523599" effort="100" velocity="100"/>
 </joint>
 <transmission name="palm_joint_3_tran">
@@ -413,11 +452,12 @@
     <mechanicalReduction>1</mechanicalReduction>
   </actuator>
 </transmission>
+
 <joint name="finger_joint_3_3" type="revolute">
   <origin xyz="0.030259 0.052411 0.0" rpy="0 0 0"/>
-  <parent link="finger_link32_1"/>
-  <child link="finger_link33_1"/>
-  <axis xyz="0.00866 -0.005 0.0"/>
+  <parent link="finger_link321"/>
+  <child link="finger_link331"/>
+  <axis xyz="0.866025 -0.5 0.0"/>
   <limit upper="1.570796" lower="-1.570796" effort="100" velocity="100"/>
 </joint>
 <transmission name="finger_joint_3_3_tran">
@@ -430,11 +470,12 @@
     <mechanicalReduction>1</mechanicalReduction>
   </actuator>
 </transmission>
+
 <joint name="finger_joint_2_3" type="revolute">
   <origin xyz="0.03026 -0.052411 0.0" rpy="0 0 0"/>
-  <parent link="finger_link22_1"/>
-  <child link="finger_link23_1"/>
-  <axis xyz="-0.00866 -0.005 0.0"/>
+  <parent link="finger_link221"/>
+  <child link="finger_link231"/>
+  <axis xyz="-0.866025 -0.5 0.0"/>
   <limit upper="1.570796" lower="-1.570796" effort="100" velocity="100"/>
 </joint>
 <transmission name="finger_joint_2_3_tran">
@@ -447,11 +488,12 @@
     <mechanicalReduction>1</mechanicalReduction>
   </actuator>
 </transmission>
+
 <joint name="finger_joint_1_3" type="revolute">
   <origin xyz="-0.060519 0.0 0.0" rpy="0 0 0"/>
-  <parent link="finger_link12_1"/>
-  <child link="finger_link13_1"/>
-  <axis xyz="0.0 0.01 0.0"/>
+  <parent link="finger_link121"/>
+  <child link="finger_link131"/>
+  <axis xyz="0.0 1.0 0.0"/>
   <limit upper="1.570796" lower="-1.570796" effort="100" velocity="100"/>
 </joint>
 <transmission name="finger_joint_1_3_tran">
@@ -464,7 +506,5 @@
     <mechanicalReduction>1</mechanicalReduction>
   </actuator>
 </transmission>
-<gazebo>
-  <plugin name="control" filename="libgazebo_ros_control.so"/>
-</gazebo>
+
 </robot>
