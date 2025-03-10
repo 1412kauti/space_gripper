@@ -11,9 +11,9 @@
     <geometry>
       <mesh filename="package://fusion2urdf/Space_Gripper_URDF/bin_stl/base_link_m-binary.stl"/>
     </geometry>
-    <!-- <material name="silver">
+    <material name="silver">
       <color rgba="1 0 0 1"/>
-    </material> -->
+    </material>
   </visual>
   <collision>
     <origin xyz="0 0 0" rpy="0 0 0"/>
@@ -33,9 +33,9 @@
     <geometry>
       <mesh filename="package://fusion2urdf/Space_Gripper_URDF/bin_stl/finger_link11_1_m-binary.stl"/>
     </geometry>
-    <!-- <material name="silver">
+    <material name="silver">
       <color rgba="1 0 0 1"/>
-    </material> -->
+    </material>
   </visual>
   <collision>
     <origin xyz="-0.18625 0.015983 -0.002636" rpy="0 0 0"/>
@@ -55,36 +55,14 @@
     <geometry>
       <mesh filename="package://fusion2urdf/Space_Gripper_URDF/bin_stl/finger_link12_1_m-binary.stl"/>
     </geometry>
-    <!-- <material name="silver">
+    <material name="silver">
       <color rgba="1 0 0 1"/>
-    </material> -->
+    </material>
   </visual>
   <collision>
     <origin xyz="-0.12573 0.015983 -0.002636" rpy="0 0 0"/>
     <geometry>
       <mesh filename="package://fusion2urdf/Space_Gripper_URDF/bin_stl/finger_link12_1_m-binary.stl"/>
-    </geometry>
-  </collision>
-</link>
-<link name="finger_link13_1">
-  <inertial>
-    <origin xyz="-0.01905400000000001 7.500000000000215e-05 0.0017199999999999997" rpy="0 0 0"/>
-    <mass value="0.061687"/>
-    <inertia ixx="1e-05" iyy="2.6e-05" izz="2.7e-05" ixy="0.0" iyz="-1.6e-05" ixz="1.7e-05"/>
-  </inertial>
-  <visual>
-    <origin xyz="-0.065211 0.015983 -0.002636" rpy="0 0 0"/>
-    <geometry>
-      <mesh filename="package://fusion2urdf/Space_Gripper_URDF/bin_stl/finger_link13_1_m-binary.stl"/>
-    </geometry>
-    <!-- <material name="silver">
-      <color rgba="1 0 0 1"/>
-    </material> -->
-  </visual>
-  <collision>
-    <origin xyz="-0.065211 0.015983 -0.002636" rpy="0 0 0"/>
-    <geometry>
-      <mesh filename="package://fusion2urdf/Space_Gripper_URDF/bin_stl/finger_link13_1_m-binary.stl"/>
     </geometry>
   </collision>
 </link>
@@ -99,9 +77,9 @@
     <geometry>
       <mesh filename="package://fusion2urdf/Space_Gripper_URDF/bin_stl/finger_link31_1_m-binary.stl"/>
     </geometry>
-    <!-- <material name="silver">
+    <material name="silver">
       <color rgba="1 0 0 1"/>
-    </material> -->
+    </material>
   </visual>
   <collision>
     <origin xyz="-0.331752 -0.065031 -0.002636" rpy="0 0 0"/>
@@ -121,36 +99,14 @@
     <geometry>
       <mesh filename="package://fusion2urdf/Space_Gripper_URDF/bin_stl/finger_link32_1_m-binary.stl"/>
     </geometry>
-    <!-- <material name="silver">
+    <material name="silver">
       <color rgba="1 0 0 1"/>
-    </material> -->
+    </material>
   </visual>
   <collision>
     <origin xyz="-0.362012 -0.117443 -0.002636" rpy="0 0 0"/>
     <geometry>
       <mesh filename="package://fusion2urdf/Space_Gripper_URDF/bin_stl/finger_link32_1_m-binary.stl"/>
-    </geometry>
-  </collision>
-</link>
-<link name="finger_link33_1">
-  <inertial>
-    <origin xyz="0.009593000000000018 0.016464000000000006 0.0017199999999999997" rpy="0 0 0"/>
-    <mass value="0.061687"/>
-    <inertia ixx="2.2e-05" iyy="1.4e-05" izz="2.7e-05" ixy="-7e-06" iyz="-5.9e-05" ixz="5.7e-05"/>
-  </inertial>
-  <visual>
-    <origin xyz="-0.392271 -0.169854 -0.002636" rpy="0 0 0"/>
-    <geometry>
-      <mesh filename="package://fusion2urdf/Space_Gripper_URDF/bin_stl/finger_link33_1_m-binary.stl"/>
-    </geometry>
-    <!-- <material name="silver">
-      <color rgba="1 0 0 1"/>
-    </material> -->
-  </visual>
-  <collision>
-    <origin xyz="-0.392271 -0.169854 -0.002636" rpy="0 0 0"/>
-    <geometry>
-      <mesh filename="package://fusion2urdf/Space_Gripper_URDF/bin_stl/finger_link33_1_m-binary.stl"/>
     </geometry>
   </collision>
 </link>
@@ -165,9 +121,9 @@
     <geometry>
       <mesh filename="package://fusion2urdf/Space_Gripper_URDF/bin_stl/finger_link21_1_m-binary.stl"/>
     </geometry>
-    <!-- <material name="silver">
+    <material name="silver">
       <color rgba="1 0 0 1"/>
-    </material> -->
+    </material>
   </visual>
   <collision>
     <origin xyz="-0.329162 0.101484 -0.002636" rpy="0 0 0"/>
@@ -187,36 +143,14 @@
     <geometry>
       <mesh filename="package://fusion2urdf/Space_Gripper_URDF/bin_stl/finger_link22_1_m-binary.stl"/>
     </geometry>
-    <!-- <material name="silver">
+    <material name="silver">
       <color rgba="1 0 0 1"/>
-    </material> -->
+    </material>
   </visual>
   <collision>
     <origin xyz="-0.359421 0.153896 -0.002636" rpy="0 0 0"/>
     <geometry>
       <mesh filename="package://fusion2urdf/Space_Gripper_URDF/bin_stl/finger_link22_1_m-binary.stl"/>
-    </geometry>
-  </collision>
-</link>
-<link name="finger_link23_1">
-  <inertial>
-    <origin xyz="0.009462000000000026 -0.016538999999999998 0.0017199999999999997" rpy="0 0 0"/>
-    <mass value="0.061687"/>
-    <inertia ixx="2.2e-05" iyy="1.4e-05" izz="2.7e-05" ixy="7e-06" iyz="-0.000168" ixz="0.000168"/>
-  </inertial>
-  <visual>
-    <origin xyz="-0.389681 0.206307 -0.002636" rpy="0 0 0"/>
-    <geometry>
-      <mesh filename="package://fusion2urdf/Space_Gripper_URDF/bin_stl/finger_link23_1_m-binary.stl"/>
-    </geometry>
-    <!-- <material name="silver">
-      <color rgba="1 0 0 1"/>
-    </material> -->
-  </visual>
-  <collision>
-    <origin xyz="-0.389681 0.206307 -0.002636" rpy="0 0 0"/>
-    <geometry>
-      <mesh filename="package://fusion2urdf/Space_Gripper_URDF/bin_stl/finger_link23_1_m-binary.stl"/>
     </geometry>
   </collision>
 </link>
@@ -231,9 +165,9 @@
     <geometry>
       <mesh filename="package://fusion2urdf/Space_Gripper_URDF/bin_stl/palm_link1_1_m-binary.stl"/>
     </geometry>
-    <!-- <material name="silver">
+    <material name="silver">
       <color rgba="1 0 0 1"/>
-    </material> -->
+    </material>
   </visual>
   <collision>
     <origin xyz="-0.252173 0.016479 0.010014" rpy="0 0 0"/>
@@ -253,9 +187,9 @@
     <geometry>
       <mesh filename="package://fusion2urdf/Space_Gripper_URDF/bin_stl/palm_link3_1_m-binary.stl"/>
     </geometry>
-    <!-- <material name="silver">
+    <material name="silver">
       <color rgba="1 0 0 1"/>
-    </material> -->
+    </material>
   </visual>
   <collision>
     <origin xyz="-0.298361 -0.008188 0.010014" rpy="0 0 0"/>
@@ -275,14 +209,80 @@
     <geometry>
       <mesh filename="package://fusion2urdf/Space_Gripper_URDF/bin_stl/palm_link2_1_m-binary.stl"/>
     </geometry>
-    <!-- <material name="silver">
+    <material name="silver">
       <color rgba="1 0 0 1"/>
-    </material> -->
+    </material>
   </visual>
   <collision>
     <origin xyz="-0.296629 0.044146 0.010014" rpy="0 0 0"/>
     <geometry>
       <mesh filename="package://fusion2urdf/Space_Gripper_URDF/bin_stl/palm_link2_1_m-binary.stl"/>
+    </geometry>
+  </collision>
+</link>
+<link name="finger_link33_1">
+  <inertial>
+    <origin xyz="0.0065810000000000035 0.010213 0.0006810000000000002" rpy="0 0 0"/>
+    <mass value="0.165174"/>
+    <inertia ixx="3.6e-05" iyy="2.6e-05" izz="4.7e-05" ixy="-8e-06" iyz="-0.000121" ixz="0.000118"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.392271 -0.169854 -0.002636" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://fusion2urdf/Space_Gripper_URDF/bin_stl/finger_link33_1_m-binary.stl"/>
+    </geometry>
+    <material name="silver">
+      <color rgba="1 0 0 1"/>
+    </material>
+  </visual>
+  <collision>
+    <origin xyz="-0.392271 -0.169854 -0.002636" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://fusion2urdf/Space_Gripper_URDF/bin_stl/finger_link33_1_m-binary.stl"/>
+    </geometry>
+  </collision>
+</link>
+<link name="finger_link23_1">
+  <inertial>
+    <origin xyz="0.005554999999999977 -0.010805000000000009 0.0006810000000000002" rpy="0 0 0"/>
+    <mass value="0.165174"/>
+    <inertia ixx="3.5e-05" iyy="2.6e-05" izz="4.7e-05" ixy="8e-06" iyz="-0.000336" ixz="0.000337"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.389681 0.206307 -0.002636" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://fusion2urdf/Space_Gripper_URDF/bin_stl/finger_link23_1_m-binary.stl"/>
+    </geometry>
+    <material name="silver">
+      <color rgba="1 0 0 1"/>
+    </material>
+  </visual>
+  <collision>
+    <origin xyz="-0.389681 0.206307 -0.002636" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://fusion2urdf/Space_Gripper_URDF/bin_stl/finger_link23_1_m-binary.stl"/>
+    </geometry>
+  </collision>
+</link>
+<link name="finger_link13_1">
+  <inertial>
+    <origin xyz="-0.012135000000000007 0.0005920000000000005 0.0006810000000000002" rpy="0 0 0"/>
+    <mass value="0.165174"/>
+    <inertia ixx="2.1e-05" iyy="4e-05" izz="4.7e-05" ixy="-0.0" iyz="-3.6e-05" ixz="3.7e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.065211 0.015983 -0.002636" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://fusion2urdf/Space_Gripper_URDF/bin_stl/finger_link13_1_m-binary.stl"/>
+    </geometry>
+    <material name="silver">
+      <color rgba="1 0 0 1"/>
+    </material>
+  </visual>
+  <collision>
+    <origin xyz="-0.065211 0.015983 -0.002636" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://fusion2urdf/Space_Gripper_URDF/bin_stl/finger_link13_1_m-binary.stl"/>
     </geometry>
   </collision>
 </link>
@@ -316,23 +316,6 @@
     <hardwareInterface>PositionJointInterface</hardwareInterface>
   </joint>
   <actuator name="finger_joint_1_2_actr">
-    <hardwareInterface>PositionJointInterface</hardwareInterface>
-    <mechanicalReduction>1</mechanicalReduction>
-  </actuator>
-</transmission>
-<joint name="finger_joint_1_3" type="revolute">
-  <origin xyz="-0.060519 0.0 0.0" rpy="0 0 0"/>
-  <parent link="finger_link12_1"/>
-  <child link="finger_link13_1"/>
-  <axis xyz="-0.0 -0.01 -0.0"/>
-  <limit upper="0.0" lower="-1.570796" effort="100" velocity="100"/>
-</joint>
-<transmission name="finger_joint_1_3_tran">
-  <type>transmission_interface/SimpleTransmission</type>
-  <joint name="finger_joint_1_3">
-    <hardwareInterface>PositionJointInterface</hardwareInterface>
-  </joint>
-  <actuator name="finger_joint_1_3_actr">
     <hardwareInterface>PositionJointInterface</hardwareInterface>
     <mechanicalReduction>1</mechanicalReduction>
   </actuator>
@@ -371,23 +354,6 @@
     <mechanicalReduction>1</mechanicalReduction>
   </actuator>
 </transmission>
-<joint name="finger_joint_3_3" type="revolute">
-  <origin xyz="0.030259 0.052411 0.0" rpy="0 0 0"/>
-  <parent link="finger_link32_1"/>
-  <child link="finger_link33_1"/>
-  <axis xyz="-0.00866 0.005 -0.0"/>
-  <limit upper="0.0" lower="-1.570796" effort="100" velocity="100"/>
-</joint>
-<transmission name="finger_joint_3_3_tran">
-  <type>transmission_interface/SimpleTransmission</type>
-  <joint name="finger_joint_3_3">
-    <hardwareInterface>PositionJointInterface</hardwareInterface>
-  </joint>
-  <actuator name="finger_joint_3_3_actr">
-    <hardwareInterface>PositionJointInterface</hardwareInterface>
-    <mechanicalReduction>1</mechanicalReduction>
-  </actuator>
-</transmission>
 <joint name="finger_joint_2_1" type="revolute">
   <origin xyz="0.032533 -0.057338 0.01265" rpy="0 0 0"/>
   <parent link="palm_link2_1"/>
@@ -418,23 +384,6 @@
     <hardwareInterface>PositionJointInterface</hardwareInterface>
   </joint>
   <actuator name="finger_joint_2_2_actr">
-    <hardwareInterface>PositionJointInterface</hardwareInterface>
-    <mechanicalReduction>1</mechanicalReduction>
-  </actuator>
-</transmission>
-<joint name="finger_joint_2_3" type="revolute">
-  <origin xyz="0.03026 -0.052411 0.0" rpy="0 0 0"/>
-  <parent link="finger_link22_1"/>
-  <child link="finger_link23_1"/>
-  <axis xyz="-0.00866 -0.005 0.0"/>
-  <limit upper="1.570796" lower="0.0" effort="100" velocity="100"/>
-</joint>
-<transmission name="finger_joint_2_3_tran">
-  <type>transmission_interface/SimpleTransmission</type>
-  <joint name="finger_joint_2_3">
-    <hardwareInterface>PositionJointInterface</hardwareInterface>
-  </joint>
-  <actuator name="finger_joint_2_3_actr">
     <hardwareInterface>PositionJointInterface</hardwareInterface>
     <mechanicalReduction>1</mechanicalReduction>
   </actuator>
@@ -486,6 +435,57 @@
     <hardwareInterface>PositionJointInterface</hardwareInterface>
   </joint>
   <actuator name="palm_joint_3_actr">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+<joint name="finger_joint_3_3" type="revolute">
+  <origin xyz="0.030259 0.052411 0.0" rpy="0 0 0"/>
+  <parent link="finger_link32_1"/>
+  <child link="finger_link33_1"/>
+  <axis xyz="0.00866 -0.005 0.0"/>
+  <limit upper="1.570796" lower="-1.570796" effort="100" velocity="100"/>
+</joint>
+<transmission name="finger_joint_3_3_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="finger_joint_3_3">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="finger_joint_3_3_actr">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+<joint name="finger_joint_2_3" type="revolute">
+  <origin xyz="0.03026 -0.052411 0.0" rpy="0 0 0"/>
+  <parent link="finger_link22_1"/>
+  <child link="finger_link23_1"/>
+  <axis xyz="-0.00866 -0.005 0.0"/>
+  <limit upper="1.570796" lower="-1.570796" effort="100" velocity="100"/>
+</joint>
+<transmission name="finger_joint_2_3_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="finger_joint_2_3">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="finger_joint_2_3_actr">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+<joint name="finger_joint_1_3" type="revolute">
+  <origin xyz="-0.060519 0.0 0.0" rpy="0 0 0"/>
+  <parent link="finger_link12_1"/>
+  <child link="finger_link13_1"/>
+  <axis xyz="0.0 0.01 0.0"/>
+  <limit upper="1.570796" lower="-1.570796" effort="100" velocity="100"/>
+</joint>
+<transmission name="finger_joint_1_3_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="finger_joint_1_3">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="finger_joint_1_3_actr">
     <hardwareInterface>PositionJointInterface</hardwareInterface>
     <mechanicalReduction>1</mechanicalReduction>
   </actuator>
