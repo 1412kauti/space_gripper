@@ -11,9 +11,7 @@
     <geometry>
       <mesh filename="package://fusion2urdf/Space_Gripper_URDF/bin_stl/base_link_m-binary.stl"/>
     </geometry>
-    <material name="silver">
-      <color rgba="1 0 0 1"/>
-    </material>
+
   </visual>
   <collision>
     <origin xyz="0 0 0" rpy="0 0 0"/>
@@ -33,9 +31,7 @@
     <geometry>
       <mesh filename="package://fusion2urdf/Space_Gripper_URDF/bin_stl/finger_link11_1_m-binary.stl"/>
     </geometry>
-    <material name="silver">
-      <color rgba="1 0 0 1"/>
-    </material>
+
   </visual>
   <collision>
     <origin xyz="-0.18625 0.015983 -0.002636" rpy="0 0 0"/>
@@ -55,9 +51,7 @@
     <geometry>
       <mesh filename="package://fusion2urdf/Space_Gripper_URDF/bin_stl/finger_link12_1_m-binary.stl"/>
     </geometry>
-    <material name="silver">
-      <color rgba="1 0 0 1"/>
-    </material>
+
   </visual>
   <collision>
     <origin xyz="-0.12573 0.015983 -0.002636" rpy="0 0 0"/>
@@ -77,9 +71,7 @@
     <geometry>
       <mesh filename="package://fusion2urdf/Space_Gripper_URDF/bin_stl/finger_link31_1_m-binary.stl"/>
     </geometry>
-    <material name="silver">
-      <color rgba="1 0 0 1"/>
-    </material>
+
   </visual>
   <collision>
     <origin xyz="-0.331752 -0.065031 -0.002636" rpy="0 0 0"/>
@@ -99,9 +91,7 @@
     <geometry>
       <mesh filename="package://fusion2urdf/Space_Gripper_URDF/bin_stl/finger_link32_1_m-binary.stl"/>
     </geometry>
-    <material name="silver">
-      <color rgba="1 0 0 1"/>
-    </material>
+
   </visual>
   <collision>
     <origin xyz="-0.362012 -0.117443 -0.002636" rpy="0 0 0"/>
@@ -121,9 +111,7 @@
     <geometry>
       <mesh filename="package://fusion2urdf/Space_Gripper_URDF/bin_stl/finger_link21_1_m-binary.stl"/>
     </geometry>
-    <material name="silver">
-      <color rgba="1 0 0 1"/>
-    </material>
+
   </visual>
   <collision>
     <origin xyz="-0.329162 0.101484 -0.002636" rpy="0 0 0"/>
@@ -143,9 +131,7 @@
     <geometry>
       <mesh filename="package://fusion2urdf/Space_Gripper_URDF/bin_stl/finger_link22_1_m-binary.stl"/>
     </geometry>
-    <material name="silver">
-      <color rgba="1 0 0 1"/>
-    </material>
+
   </visual>
   <collision>
     <origin xyz="-0.359421 0.153896 -0.002636" rpy="0 0 0"/>
@@ -165,9 +151,7 @@
     <geometry>
       <mesh filename="package://fusion2urdf/Space_Gripper_URDF/bin_stl/palm_link1_1_m-binary.stl"/>
     </geometry>
-    <material name="silver">
-      <color rgba="1 0 0 1"/>
-    </material>
+
   </visual>
   <collision>
     <origin xyz="-0.252173 0.016479 0.010014" rpy="0 0 0"/>
@@ -187,9 +171,7 @@
     <geometry>
       <mesh filename="package://fusion2urdf/Space_Gripper_URDF/bin_stl/palm_link3_1_m-binary.stl"/>
     </geometry>
-    <material name="silver">
-      <color rgba="1 0 0 1"/>
-    </material>
+
   </visual>
   <collision>
     <origin xyz="-0.298361 -0.008188 0.010014" rpy="0 0 0"/>
@@ -209,9 +191,7 @@
     <geometry>
       <mesh filename="package://fusion2urdf/Space_Gripper_URDF/bin_stl/palm_link2_1_m-binary.stl"/>
     </geometry>
-    <material name="silver">
-      <color rgba="1 0 0 1"/>
-    </material>
+
   </visual>
   <collision>
     <origin xyz="-0.296629 0.044146 0.010014" rpy="0 0 0"/>
@@ -231,9 +211,7 @@
     <geometry>
       <mesh filename="package://fusion2urdf/Space_Gripper_URDF/bin_stl/finger_link33_1_m-binary.stl"/>
     </geometry>
-    <material name="silver">
-      <color rgba="1 0 0 1"/>
-    </material>
+
   </visual>
   <collision>
     <origin xyz="-0.392271 -0.169854 -0.002636" rpy="0 0 0"/>
@@ -253,9 +231,7 @@
     <geometry>
       <mesh filename="package://fusion2urdf/Space_Gripper_URDF/bin_stl/finger_link23_1_m-binary.stl"/>
     </geometry>
-    <material name="silver">
-      <color rgba="1 0 0 1"/>
-    </material>
+
   </visual>
   <collision>
     <origin xyz="-0.389681 0.206307 -0.002636" rpy="0 0 0"/>
@@ -275,9 +251,7 @@
     <geometry>
       <mesh filename="package://fusion2urdf/Space_Gripper_URDF/bin_stl/finger_link13_1_m-binary.stl"/>
     </geometry>
-    <material name="silver">
-      <color rgba="1 0 0 1"/>
-    </material>
+
   </visual>
   <collision>
     <origin xyz="-0.065211 0.015983 -0.002636" rpy="0 0 0"/>
