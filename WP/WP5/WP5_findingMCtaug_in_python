@@ -10,7 +10,7 @@ theta_1, theta_2, theta_3, theta_4 = sp.symbols('theta_1, theta_2, theta_3, thet
 d_1, L_2, L_3, L_4 = sp.symbols('d_1 L_2 L_3 L_4')
 a_1 = sp.Symbol('a_1')
 
-# end effector positions (4th column of the FK transformation matrix and phi
+# end effector positions (4th column of the FK transformation matrix and phi)
 x_1 = sp.cos(theta_1)*(L_4*sp.cos(theta_2+theta_3+theta_4)+L_3*sp.cos(theta_2+theta_3)+L_2*sp.cos(theta_2)+a_1)
 x_2 = sp.sin(theta_1)*(L_4*sp.cos(theta_2+theta_3+theta_4)+L_3*sp.cos(theta_2+theta_3)+L_2*sp.cos(theta_2)+a_1)
 x_3 = L_4*sp.sin(theta_2+theta_3+theta_4) + L_3*sp.sin(theta_2+theta_3) + L_2*sp.sin(theta_2)+d_1
