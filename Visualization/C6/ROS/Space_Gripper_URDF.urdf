@@ -1,10 +1,6 @@
 <?xml version="1.0" ?>
 <robot name="Space_Gripper_URDF">
 
-<!-- <material name="silver">
-  <color rgba="0.700 0.700 0.700 1.000"/>
-</material> -->
-
 <link name="base_link">
   <inertial>
     <origin xyz="0.2824084412039216 -0.01747868073746133 -0.008955658350251127" rpy="0 0 0"/>
@@ -15,10 +11,8 @@
     <origin xyz="0 0 0" rpy="0 0 0"/>
     <geometry>
       <mesh filename="meshes/base_link.stl" scale="0.001 0.001 0.001"/>
-        <!-- </geometry>
-    <material name="silver"/>
-    <material/> -->
-  </visual>
+
+  </geometry>
   <collision>
     <origin xyz="0 0 0" rpy="0 0 0"/>
     <geometry>
@@ -37,10 +31,9 @@
     <origin xyz="-0.18625 0.015983 -0.002636" rpy="0 0 0"/>
     <geometry>
       <mesh filename="meshes/finger_link111.stl" scale="0.001 0.001 0.001"/>
-        <!-- </geometry>
-    <material name="silver"/>
-    <material/> -->
-  </visual>
+
+  </geometry>
+</visual>
   <collision>
     <origin xyz="-0.18625 0.015983 -0.002636" rpy="0 0 0"/>
     <geometry>
@@ -59,10 +52,9 @@
     <origin xyz="-0.12573 0.015983 -0.002636" rpy="0 0 0"/>
     <geometry>
       <mesh filename="meshes/finger_link121.stl" scale="0.001 0.001 0.001"/>
-        <!-- </geometry>
-    <material name="silver"/>
-    <material/> -->
-  </visual>
+
+  </geometry>
+</visual>
   <collision>
     <origin xyz="-0.12573 0.015983 -0.002636" rpy="0 0 0"/>
     <geometry>
@@ -81,10 +73,9 @@
     <origin xyz="-0.331752 -0.065031 -0.002636" rpy="0 0 0"/>
     <geometry>
       <mesh filename="meshes/finger_link311.stl" scale="0.001 0.001 0.001"/>
-        <!-- </geometry>
-    <material name="silver"/>
-    <material/> -->
-  </visual>
+
+  </geometry>
+</visual>
   <collision>
     <origin xyz="-0.331752 -0.065031 -0.002636" rpy="0 0 0"/>
     <geometry>
@@ -103,10 +94,9 @@
     <origin xyz="-0.362012 -0.117443 -0.002636" rpy="0 0 0"/>
     <geometry>
       <mesh filename="meshes/finger_link321.stl" scale="0.001 0.001 0.001"/>
-        <!-- </geometry>
-    <material name="silver"/>
-    <material/> -->
-  </visual>
+
+  </geometry>
+</visual>
   <collision>
     <origin xyz="-0.362012 -0.117443 -0.002636" rpy="0 0 0"/>
     <geometry>
@@ -125,10 +115,9 @@
     <origin xyz="-0.329162 0.101484 -0.002636" rpy="0 0 0"/>
     <geometry>
       <mesh filename="meshes/finger_link211.stl" scale="0.001 0.001 0.001"/>
-        <!-- </geometry>
-    <material name="silver"/>
-    <material/> -->
-  </visual>
+
+  </geometry>
+</visual>
   <collision>
     <origin xyz="-0.329162 0.101484 -0.002636" rpy="0 0 0"/>
     <geometry>
@@ -147,10 +136,9 @@
     <origin xyz="-0.359421 0.153896 -0.002636" rpy="0 0 0"/>
     <geometry>
       <mesh filename="meshes/finger_link221.stl" scale="0.001 0.001 0.001"/>
-        <!-- </geometry>
-    <material name="silver"/>
-    <material/> -->
-  </visual>
+
+  </geometry>
+</visual>
   <collision>
     <origin xyz="-0.359421 0.153896 -0.002636" rpy="0 0 0"/>
     <geometry>
@@ -169,10 +157,9 @@
     <origin xyz="-0.252173 0.016479 0.010014" rpy="0 0 0"/>
     <geometry>
       <mesh filename="meshes/palm_link11.stl" scale="0.001 0.001 0.001"/>
-        <!-- </geometry>
-    <material name="silver"/>
-    <material/> -->
-  </visual>
+
+  </geometry>
+</visual>
   <collision>
     <origin xyz="-0.252173 0.016479 0.010014" rpy="0 0 0"/>
     <geometry>
@@ -191,10 +178,9 @@
     <origin xyz="-0.298361 -0.008188 0.010014" rpy="0 0 0"/>
     <geometry>
       <mesh filename="meshes/palm_link31.stl" scale="0.001 0.001 0.001"/>
-        <!-- </geometry>
-    <material name="silver"/>
-    <material/> -->
-  </visual>
+
+  </geometry>
+</visual>
   <collision>
     <origin xyz="-0.298361 -0.008188 0.010014" rpy="0 0 0"/>
     <geometry>
@@ -213,10 +199,9 @@
     <origin xyz="-0.296629 0.044146 0.010014" rpy="0 0 0"/>
     <geometry>
       <mesh filename="meshes/palm_link21.stl" scale="0.001 0.001 0.001"/>
-        <!-- </geometry>
-    <material name="silver"/>
-    <material/> -->
-  </visual>
+
+  </geometry>
+</visual>
   <collision>
     <origin xyz="-0.296629 0.044146 0.010014" rpy="0 0 0"/>
     <geometry>
@@ -235,10 +220,9 @@
     <origin xyz="-0.392271 -0.169854 -0.002636" rpy="0 0 0"/>
     <geometry>
       <mesh filename="meshes/finger_link331.stl" scale="0.001 0.001 0.001"/>
-        <!-- </geometry>
-    <material name="silver"/>
-    <material/> -->
-  </visual>
+
+  </geometry>
+</visual>
   <collision>
     <origin xyz="-0.392271 -0.169854 -0.002636" rpy="0 0 0"/>
     <geometry>
@@ -257,10 +241,9 @@
     <origin xyz="-0.389681 0.206307 -0.002636" rpy="0 0 0"/>
     <geometry>
       <mesh filename="meshes/finger_link231.stl" scale="0.001 0.001 0.001"/>
-        <!-- </geometry>
-    <material name="silver"/>
-    <material/> -->
-  </visual>
+
+  </geometry>
+</visual>
   <collision>
     <origin xyz="-0.389681 0.206307 -0.002636" rpy="0 0 0"/>
     <geometry>
@@ -279,10 +262,9 @@
     <origin xyz="-0.065211 0.015983 -0.002636" rpy="0 0 0"/>
     <geometry>
       <mesh filename="meshes/finger_link131.stl" scale="0.001 0.001 0.001"/>
-        <!-- </geometry>
-    <material name="silver"/>
-    <material/> -->
-  </visual>
+
+  </geometry>
+</visual>
   <collision>
     <origin xyz="-0.065211 0.015983 -0.002636" rpy="0 0 0"/>
     <geometry>
